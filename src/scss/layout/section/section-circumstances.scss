@@ -1,0 +1,157 @@
+.section-circumstances {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../assets/img/leafes-bg.svg') center center no-repeat;
+    width: 435px;
+    height: 306px;
+    display: block;
+    pointer-events: none;
+    transform: translateY(-40%);
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    z-index: 2;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: -24px;
+    background: url(../assets/img/leafes-bt-bg.svg) center center no-repeat;
+    width: 360px;
+    height: 295px;
+    display: block;
+    pointer-events: none;
+    transform: rotate(12deg);
+    z-index: 2;
+  }
+  .section-bg {
+    height: 100px;
+    width: 100%;
+    background: url('../assets/img/wave-blue2.svg') left center repeat-x;
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+    margin-bottom: -1px;
+  }
+}
+
+.section-circumstances__inner {
+  padding: 100px 0;
+  background-color: #3B88EF;
+}
+
+.circumstances-layout {
+  position: relative;
+  min-height: 400px;
+}
+
+.circumstances-content {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #39414D;
+
+  &__part {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      list-style-type: disc;
+    }
+  }
+}
+
+.circumstances-item {
+  display: flex;
+  background: #FFFFFF;
+  border: 2px solid #3365A1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  color: #39414D;
+  max-width: 375px;
+  padding: 20px;
+  font-weight: 400;
+  margin-bottom: 32px;
+
+  &__title {
+    font-size: 20px;
+    color: #3B88EF;
+  }
+  
+  &__index {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    background-color: #FFC438;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 50%;
+  }
+}
+
+.circumstances-image {
+  position: absolute;
+  width: 36%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  img {
+    position: relative;
+    left: 50%;
+    width: 110%;
+    transform: translateX(-60%);
+  }
+}
+
+.circumstances-footer {
+  margin-top: 85px;
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    margin: 0 4px;
+  }
+}
+
+
+@include respond-to($lg) {
+
+}
+
+@include respond-to($md) {
+
+}
+
+@include respond-to($sm) {
+
+}
+
+@media screen and (max-width: 720px) {
+
+}
+
+@include respond-to($xs) {
+
+}
+
+@media screen and (max-width: 420px) {
+
+}

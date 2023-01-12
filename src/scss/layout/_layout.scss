@@ -1,0 +1,21 @@
+
+.container {
+  max-width: 1366px;
+  padding: 0 60px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include respond-to($lg) {
+    max-width: 1440px;
+    padding: 0 40px;
+  }
+
+  @include respond-to($md) {
+    max-width: 610px
+  }
+
+  @include respond-to($xs) {
+    max-width: 420px;
+    padding: 0 14px;
+  }
+}

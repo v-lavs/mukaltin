@@ -1,0 +1,177 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 20px/1.2 $main-font;
+  height: 100%;
+  background-color: #fff;
+  color: #39414D;
+
+  &.modal_open {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.block-btns{
+  display: flex;
+  align-items: flex-start;
+}
+.btn-buy {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  right: 34px;
+  width: 90px;
+  height: 130px;
+  z-index: 100;
+
+  &__img {
+    width: 90px;
+    height: 93px;
+    display: block;
+    transition: opacity .5s;
+
+    &_hover {
+      position: absolute;
+      display: block;
+      width: 99px;
+      height: 136px;
+      top: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity .5s;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .btn-pay__img {
+      opacity: 0;
+    }
+
+    .btn-pay__img_hover {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    .press {
+      fill: #FF621C;
+    }
+  }
+}
+
+.literature-sources {
+  font-family: $main-font;
+  font-size: 20px;
+  padding-bottom: 60px;
+
+  strong {
+    color: #3B88EF;
+  }
+
+  p {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.note{
+  background-color: #FFC438;
+  border-radius: 10px;
+  padding: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #39414D;
+}
+
+.dynamic-content {
+  p {
+    font-size: 16px;
+    margin-bottom: .65em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5em;
+  }
+
+  a {
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    padding-left: 11px;
+    margin-bottom: 20px;
+
+    > li {
+      position: relative;
+      padding-left: 16px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #3B4040;
+        left: 0;
+        top: 10px;
+      }
+    }
+  }
+
+  ol {
+    position: relative;
+    padding-left: 32px;
+    line-height: 1.5;
+    color: #3B4040;
+    counter-reset: list;
+
+    li:before {
+      position: absolute;
+      left: 8px;
+      counter-increment: list;
+      content: counters(list, '. ') '.';
+    }
+  }
+}
+
+
+
+

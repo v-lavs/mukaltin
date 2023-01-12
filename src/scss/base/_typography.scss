@@ -1,0 +1,32 @@
+.text {
+  &_xl {
+    font-size: 54px;
+  }
+
+  &_lg {
+    font-size: 60px;
+  }
+
+  &_md {
+    font-size: 40px;
+  }
+  &_sm{
+    font-size: 30px;
+  }
+}
+
+.title {
+  font-weight: 400;
+
+  &_md {
+    font-size: 30px;
+  }
+
+  &_sm {
+    font-size: 24px;
+  }
+}
+
+
+
+

@@ -1,0 +1,71 @@
+.btn {
+  display: flex;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: .5s;
+  padding: 19px 64px;
+  &__icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 8px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+  }
+
+  &_white {
+    background-color: #FFFFFF;
+    color: #3B88EF;
+  }
+
+  &_warm{
+    background-color: #FF7436;
+    color: #FFFFFF;
+  }
+
+  &_stroke {
+    background-color: transparent;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+  }
+}
+
+.btn_play {
+  position: absolute;
+  display: inline-block;
+  border: none;
+  width: 98px;
+  height: 98px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 16px;
+    height: 17px;
+    background-image: url(../assets/img/triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    margin-left: 2px;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,56 @@
+.section-specifics {
+  &__card {
+    display: flex;
+    align-items: center;
+    background-color: wheat;
+    max-width: 305px;
+      }
+
+  .card {
+    &__link {
+      border: none;
+      display: flex;
+      align-items: flex-end;
+      background-color: #FFFFFF;
+      padding: 10px 0;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: #3B88EF;
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+
+      svg {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &__img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      background-color: rosybrown;
+
+    }
+  }
+  .card_1,
+  .card_2 {
+    justify-content: flex-end;
+    text-align: right;
+    .card__body {
+      margin-right: 10px;
+      order: -1;
+    }
+
+    .card__icon {
+      margin-left: 10px;
+    }
+  }
+}
