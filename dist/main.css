@@ -1788,7 +1788,8 @@ body.modal_open {
 .section-advantages .player-wrap {
   position: relative;
   width: 100%;
-  padding-top: 54%;
+  max-width: 583px;
+  padding-top: 55.5%;
   background: #FDE6D9;
   border-radius: 10px;
   overflow: hidden;
@@ -1797,8 +1798,6 @@ body.modal_open {
 
 .section-advantages .part_left {
   position: relative;
-  padding-top: 80px;
-  padding-bottom: 160px;
   min-height: 450px;
   width: 45%;
   flex-shrink: 0;
@@ -1820,7 +1819,7 @@ body.modal_open {
   position: absolute;
   top: 50%;
   transform: translate(50%, -50%);
-  right: 0%;
+  right: 0;
   width: 68px;
   height: 425px;
   background: url("../assets/img/green-wave.svg") center no-repeat;
@@ -1830,9 +1829,6 @@ body.modal_open {
 .section-advantages .section-advantages__article {
   position: relative;
   padding: 80px 40px 110px 30px;
-  font-family: 'Exo 2';
-  font-style: normal;
-  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #39414D;
@@ -1840,13 +1836,14 @@ body.modal_open {
 }
 
 .section-advantages .section-advantages__article-title {
-  margin-bottom: 30px;
+  line-height: 1.2;
+  margin-bottom: 44px;
 }
 
 .section-advantages .advantages-list__item {
   max-width: 410px;
   width: 100%;
-  margin: 0 auto 10px;
+  margin: 0 auto 15px;
 }
 
 .section-advantages .advantages-list__item:after {
@@ -1855,7 +1852,7 @@ body.modal_open {
   height: 10px;
   width: 100%;
   background: url(../assets/img/dots.svg) center center no-repeat;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .section-advantages .section-advantages__footer {
@@ -1868,8 +1865,6 @@ body.modal_open {
   background: #2F766E;
   border-radius: 10px;
   text-transform: uppercase;
-  font-family: 'Exo 2';
-  font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 36px;
