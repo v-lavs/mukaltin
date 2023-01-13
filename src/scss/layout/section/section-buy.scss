@@ -1,0 +1,37 @@
+.section-buy {
+  background-image: url(../assets/img/bg-sect-buy.png);
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: 147px 635px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  &__title {
+    text-align: center;
+    margin: 0 auto 60px;
+    color: #FFFFFF;
+  }
+
+  .title_lg {
+    display: block;
+  }
+
+  .wrap-wgt {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    background-color: #FDE6D9;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .geo-wgt{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

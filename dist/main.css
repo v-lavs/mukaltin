@@ -811,7 +811,7 @@ html {
 body {
   font: 400 20px/1.2 "Exo 2", sans-serif;
   height: 100%;
-  background-color: #fff;
+  background-color: #FFFFFF;
   color: #39414D;
 }
 
@@ -842,6 +842,19 @@ body.modal_open {
 .block-btns {
   display: flex;
   align-items: flex-start;
+}
+
+.btns-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.btns-wrap .btn {
+  margin-right: 10px;
+}
+
+.btns-wrap .btn:last-child {
+  margin-right: 0;
 }
 
 .btn-buy {
@@ -992,12 +1005,16 @@ body.modal_open {
   font-size: 30px;
 }
 
-.title {
-  font-weight: 400;
+.title_lg {
+  font-size: 62px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .title_md {
   font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .title_sm {
@@ -1084,6 +1101,11 @@ body.modal_open {
   background-color: transparent;
   border-color: #FFFFFF;
   color: #FFFFFF;
+}
+
+.btn_stroke-blue {
+  color: #3B88EF;
+  border-color: #3B88EF;
 }
 
 .btn_play {
@@ -1523,7 +1545,6 @@ body.modal_open {
 .circumstances-content {
   display: flex;
   justify-content: space-between;
-  font-family: 'Exo 2';
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -1539,6 +1560,7 @@ body.modal_open {
 
 .circumstances-content__part:last-child {
   justify-content: flex-end;
+  transform: translateY(50px);
 }
 
 .circumstances-content ul {
@@ -1553,7 +1575,7 @@ body.modal_open {
   display: flex;
   background: #FFFFFF;
   border: 2px solid #3365A1;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   color: #39414D;
   max-width: 375px;
@@ -1577,6 +1599,7 @@ body.modal_open {
   font-size: 12px;
   color: #fff;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .circumstances-image {
@@ -1623,15 +1646,6 @@ body.modal_open {
   height: 481px;
   transform: translate(21%, -34%);
   z-index: 4;
-}
-
-.section-advantages .btns-wrap {
-  display: flex;
-  justify-content: center;
-}
-
-.section-advantages .btns-wrap .btn {
-  margin: 0;
 }
 
 .section-advantages .section-advantages__layout {
@@ -1748,6 +1762,45 @@ body.modal_open {
   padding: 38px;
   color: #fff;
   margin-bottom: 58px;
+}
+
+.section-buy {
+  background-image: url(../assets/img/bg-sect-buy.png);
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: 147px 635px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.section-buy__title {
+  text-align: center;
+  margin: 0 auto 60px;
+  color: #FFFFFF;
+}
+
+.section-buy .title_lg {
+  display: block;
+}
+
+.section-buy .wrap-wgt {
+  position: relative;
+  width: 100%;
+  padding-top: 60%;
+  background-color: #FDE6D9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.section-buy .geo-wgt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 1200px) {

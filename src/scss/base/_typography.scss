@@ -10,16 +10,24 @@
   &_md {
     font-size: 40px;
   }
-  &_sm{
+
+  &_sm {
     font-size: 30px;
   }
 }
 
 .title {
-  font-weight: 400;
+
+  &_lg {
+    font-size: 62px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 
   &_md {
     font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
   &_sm {
