@@ -1083,8 +1083,9 @@ body.modal_open {
   margin-right: 8px;
 }
 
-.btn__icon img {
-  width: 100%;
+.btn__icon svg {
+  max-width: 100%;
+  display: inline-block;
 }
 
 .btn_white {
@@ -1282,7 +1283,7 @@ body.modal_open {
   background-color: #3B88EF;
   min-height: 700px;
   color: #FFFFFF;
-  background-image: url(../assets/img/wave-blue1.png);
+  background-image: url(../assets/img/wave_blue_dark.svg);
   background-position: -40px bottom;
   background-repeat: repeat-x;
   background-size: 208px 224px;
@@ -1489,6 +1490,98 @@ body.modal_open {
   margin-left: 10px;
 }
 
+.section-how-take {
+  padding-bottom: 80px;
+}
+
+.section-how-take__footer {
+  background: #2F766E;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+
+.section-how-take__footer-title {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-how-take .part_left {
+  display: flex;
+  align-items: flex-start;
+  width: 53.25%;
+  padding-top: 30px;
+}
+
+.section-how-take .part_left img {
+  width: 100%;
+}
+
+.section-how-take .part_right {
+  width: 46.75%;
+}
+
+.section-how-take .btns-wrap {
+  padding-top: 68px;
+}
+
+.card-take {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 583px;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  color: #000000;
+  margin-bottom: 28px;
+  border: 1px solid #F2EFED;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.card-take:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 90%;
+  height: 10px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: #FF7436;
+  opacity: 0.25;
+  filter: blur(9.5px);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.card-take__icon {
+  width: 90px;
+  height: 93px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.card-take:nth-child(1) .card-take__icon {
+  background-image: url(../assets/img/ic_application_1.svg);
+}
+
+.card-take:nth-child(2) .card-take__icon {
+  background-image: url(../assets/img/ic_application_2.svg);
+}
+
+.card-take:nth-child(3) .card-take__icon {
+  background-image: url(../assets/img/ic_application_3.svg);
+}
+
+.card-take:last-child {
+  margin-bottom: 0;
+}
+
 .section-circumstances {
   position: relative;
 }
@@ -1524,11 +1617,11 @@ body.modal_open {
 }
 
 .section-circumstances .section-bg {
-  height: 100px;
+  height: 163px;
   width: 100%;
-  background: url("../assets/img/wave-blue2.svg") left center repeat-x;
+  background: url("../assets/img/wave_blue_light.svg") left center repeat-x;
   -webkit-background-size: auto 100%;
-  background-size: auto 100%;
+  background-size: 208px 224px;
   margin-bottom: -1px;
 }
 
@@ -1571,22 +1664,44 @@ body.modal_open {
   list-style-type: disc;
 }
 
+.circumstances-content ul li::marker {
+  color: #D9D9D9;
+}
+
 .circumstances-item {
+  position: relative;
   display: flex;
   background: #FFFFFF;
   border: 2px solid #3365A1;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   color: #39414D;
-  max-width: 375px;
-  padding: 20px;
-  font-weight: 400;
+  max-width: 380px;
+  padding: 20px 19px;
   margin-bottom: 32px;
 }
 
+.circumstances-item:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 90%;
+  height: 25px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: #13253B;
+  opacity: 0.25;
+  filter: blur(9.5px);
+  border-radius: 10px;
+  z-index: -1;
+}
+
 .circumstances-item__title {
+  font-weight: 600;
   font-size: 20px;
+  margin-bottom: 10px;
   color: #3B88EF;
+  line-height: 1.2;
 }
 
 .circumstances-item__index {
@@ -1602,11 +1717,15 @@ body.modal_open {
   flex-shrink: 0;
 }
 
+.circumstances-item sup {
+  font-size: 0.65em;
+}
+
 .circumstances-image {
   position: absolute;
   width: 36%;
   left: 50%;
-  top: 50%;
+  top: 45%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 0;
@@ -1620,13 +1739,9 @@ body.modal_open {
 }
 
 .circumstances-footer {
-  margin-top: 85px;
+  padding-top: 143px;
   display: flex;
   justify-content: center;
-}
-
-.circumstances-footer .btn {
-  margin: 0 4px;
 }
 
 .section-advantages {

@@ -14,8 +14,9 @@
     height: 24px;
     display: inline-block;
     margin-right: 8px;
-    img {
-      width: 100%;
+    svg {
+      max-width: 100%;
+      display: inline-block;
     }
   }
 

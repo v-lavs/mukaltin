@@ -1,5 +1,6 @@
 .section-circumstances {
   position: relative;
+
   &:before {
     content: '';
     position: absolute;
@@ -15,6 +16,7 @@
     background-size: 100%;
     z-index: 2;
   }
+
   &:after {
     content: '';
     position: absolute;
@@ -28,12 +30,13 @@
     transform: rotate(12deg);
     z-index: 2;
   }
+
   .section-bg {
-    height: 100px;
+    height: 163px;
     width: 100%;
-    background: url('../assets/img/wave-blue2.svg') left center repeat-x;
+    background: url('../assets/img/wave_blue_light.svg') left center repeat-x;
     -webkit-background-size: auto 100%;
-    background-size: auto 100%;
+    background-size: 208px 224px;
     margin-bottom: -1px;
   }
 }
@@ -67,32 +70,57 @@
       transform: translateY(50px);
     }
   }
+
   ul {
     padding-left: 20px;
+
     li {
       list-style-type: disc;
+
+      &::marker {
+        color: #D9D9D9;
+      }
     }
   }
 }
 
 .circumstances-item {
+  position: relative;
   display: flex;
   background: #FFFFFF;
   border: 2px solid #3365A1;
-  box-shadow:0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   color: #39414D;
-  max-width: 375px;
-  padding: 20px;
-  font-weight: 400;
+  max-width: 380px;
+  padding: 20px 19px;
   margin-bottom: 32px;
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 90%;
+    height: 25px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    background-color: #13253B;
+    opacity: 0.25;
+    filter: blur(9.5px);
+    border-radius: 10px;
+    z-index: -1;
+  }
 
 
   &__title {
+    font-weight: 600;
     font-size: 20px;
+    margin-bottom: 10px;
     color: #3B88EF;
+    line-height: 1.2;
   }
-  
+
   &__index {
     width: 24px;
     height: 24px;
@@ -106,16 +134,20 @@
     flex-shrink: 0;
   }
 
+  sup {
+    font-size: 0.65em;
+  }
 }
 
 .circumstances-image {
   position: absolute;
   width: 36%;
   left: 50%;
-  top: 50%;
+  top: 45%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 0;
+
   img {
     position: relative;
     left: 50%;
@@ -125,13 +157,9 @@
 }
 
 .circumstances-footer {
-  margin-top: 85px;
+  padding-top: 143px;
   display: flex;
   justify-content: center;
-
-  .btn {
-    margin: 0 4px;
-  }
 }
 
 

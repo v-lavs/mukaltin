@@ -1,10 +1,101 @@
-.section-how-take{
+.section-how-take {
+  padding-bottom: 80px;
 
+  &__footer {
+    background: #2F766E;
+    border-radius: 10px;
+    color: #FFFFFF;
+    &-title{
+      font-size: 40px;
+      font-weight: 400;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .part_left {
+    display: flex;
+    align-items: flex-start;
+    width: 53.25%;
+    padding-top: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .part_right {
+    width: 46.75%;
+  }
+
+  .btns-wrap {
+    padding-top: 68px;
+  }
 }
 
+.card-take {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 583px;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  color: #000000;
+  margin-bottom: 28px;
+  border: 1px solid #F2EFED;
+  border-radius: 10px;
+  align-items: center;
 
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 90%;
+    height: 10px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
 
+    background-color: #FF7436;
+    opacity: 0.25;
+    filter: blur(9.5px);
+    border-radius: 10px;
+    z-index: -1;
+  }
 
+  &__icon {
+    width: 90px;
+    height: 93px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+
+  &:nth-child(1) {
+    .card-take__icon {
+      background-image: url(../assets/img/ic_application_1.svg);
+    }
+  }
+
+  &:nth-child(2) {
+    .card-take__icon {
+      background-image: url(../assets/img/ic_application_2.svg);
+    }
+  }
+
+  &:nth-child(3) {
+    .card-take__icon {
+      background-image: url(../assets/img/ic_application_3.svg);
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}
 
 @include respond-to($lg) {
 
@@ -17,9 +108,11 @@
 @include respond-to($sm) {
 
 }
+
 @media screen and (max-width: 720px) {
 
 }
+
 @include respond-to($xs) {
 
 }
