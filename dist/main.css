@@ -2066,7 +2066,9 @@ body.modal_open {
 }
 
 @media only screen and (max-width: 1200px) {
-  .menu .menu {
+  .menu {
+    width: 90%;
+    max-width: 910px;
     background-color: #FFFFFF;
     flex-direction: column;
     border-radius: 10px;
