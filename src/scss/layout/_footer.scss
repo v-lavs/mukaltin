@@ -90,15 +90,62 @@
   }
 }
 
-@include respond-to($xs) {
+
+@include respond-to($lg) {
   .footer {
+    .copyright {
+      flex-direction: column;
+      align-items: center;
 
-  }
-  .social-bar {
-    justify-content: center;
-  }
-  .social-bar__item {
-    margin: 0 9px;
-  }
+      &__item {
+        margin-bottom: 3px;
 
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($md) {
+  .footer {
+    &__logo,
+    .social-bar {
+      margin-bottom: 20px;
+    }
+
+    .d-flex {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .copyright {
+      order: 1;
+      flex-direction: row;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .footer {
+    .social-bar {
+      margin-bottom: 40px;
+    }
+
+    .copyright {
+      flex-direction: column;
+      &__item {
+        margin-bottom: 6px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
