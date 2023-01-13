@@ -24,58 +24,90 @@ $(document).ready(function () {
     const slider = document.querySelector('.banner-slider');
 
     if (slider) {
-        const sliderTimeout = 5500;
+        const BG_TRANSITION = 800;
+        const CONTENT_TRANSITION = 800;
+        const TIMEOUT_OVERLAP = 200
+        const transitionStyles = document.createElement('style');
 
-        // slides informations
-        const slidesDefault = document.querySelectorAll(".banner-slider .banner-slider__slide");
+        const transition_rules = "\n" +
+            ".leave-anim .part-bg {\n" +
+            "-webkit-transition: " + BG_TRANSITION + "ms transform;\n" +
+            "-moz-transition: " + BG_TRANSITION + "ms transform;\n" +
+            "-ms-transition: " + BG_TRANSITION + "ms transform;\n" +
+            "-o-transition: " + BG_TRANSITION + "ms transform;\n" +
+            "transition: " + BG_TRANSITION + "ms transform;\n" +
+            "}\n" +
+            ".leave-anim .part-bg {\n" +
+            "-webkit-transition: " + CONTENT_TRANSITION + "ms transform;\n" +
+            "-moz-transition: " + CONTENT_TRANSITION + "ms transform;\n" +
+            "-ms-transition: " + CONTENT_TRANSITION + "ms transform;\n" +
+            "-o-transition: " + CONTENT_TRANSITION + "ms transform;\n" +
+            "transition: " + CONTENT_TRANSITION + "ms transform;\n" +
+            "}\n" +
+            "" +
+            ".content-anim {\n" +
+            "-webkit-transition: " + CONTENT_TRANSITION + "ms;\n" +
+            "transition: " + CONTENT_TRANSITION + "ms;\n" +
+            "}"
 
-        slidesDefault.forEach(item => {
-            const clonedItem = item.cloneNode(true);
-            slider.appendChild(clonedItem);
+        transitionStyles.appendChild(document.createTextNode(transition_rules))
+        document.head.append(transitionStyles);
+
+        let active_slide_index = 0;
+        const slides = $('.banner-slider .banner-slider__slide');
+        $(slides[active_slide_index]).addClass('enter-anim active-slide');
+        const next_btn = $('.banner-slider .next-slide-btn');
+        const prev_btn = $('.banner-slider .prev-slide-btn');
+
+        let is_animating = false;
+
+        function goToSlide(currSlide, nextSlide) {
+            is_animating = true; // start slide animation
+
+            $(currSlide).addClass('leave-anim');
+            $(nextSlide).addClass('next-slide');
+            setTimeout(() => {
+                setTimeout(() => {
+                    $(currSlide).removeClass('leave-anim active-slide enter-anim');
+                    $(nextSlide).removeClass('next-slide');
+                    $(nextSlide).addClass('enter-anim active-slide');
+
+                    is_animating = false; // end slide animation. allowing slide change
+                }, CONTENT_TRANSITION + TIMEOUT_OVERLAP);
+                $(nextSlide).addClass('enter-anim');
+            }, BG_TRANSITION + TIMEOUT_OVERLAP);
+        }
+
+        next_btn.click(function (e) {
+            if (!is_animating) {
+                const currSlide = slides[active_slide_index];
+                const nextSlide = slides[active_slide_index + 1];
+                if (!nextSlide) {
+                    $(this).addClass('disabled');
+                    $(prev_btn).removeClass('disabled');
+                }
+                if (currSlide && nextSlide) {
+                    goToSlide(currSlide, nextSlide);
+                    active_slide_index++;
+                }
+            }
         });
 
-        let slides = document.querySelectorAll(".banner-slider .banner-slider__slide");
-
-        function moveSlide(e) {
-            const currSlideIndex = [].slice.call(slides).findIndex(s => s.classList.contains('active-slide'));
-            const slide = slides[currSlideIndex + 1];
-            const prevSlide = slides[currSlideIndex - 1];
-
-            if (prevSlide) {
-                const cloned = prevSlide.cloneNode(true);
-                cloned.classList.remove('slide-on');
-                prevSlide.remove();
-                slider.appendChild(cloned);
-                slides = document.querySelectorAll(".banner-slider .banner-slider__slide")
+        prev_btn.click(function (e) {
+            if (!is_animating) {
+                const currSlide = slides[active_slide_index];
+                const prevSlide = slides[active_slide_index - 1];
+                if (!prevSlide) {
+                    $(this).addClass('disabled');
+                    $(next_btn).removeClass('disabled');
+                }
+                if (currSlide && prevSlide) {
+                    goToSlide(currSlide, prevSlide);
+                    active_slide_index--;
+                }
             }
-
-            $(slides).removeClass('active-slide');
-
-            slide.classList.add("slide-on");
-            slide.classList.add("active-slide");
-        }
-
-        function startSlider() {
-            slides[0].classList.add('active-slide');
-            slides[0].classList.add("slide-on");
-
-            setInterval(() => {
-                moveSlide();
-            }, sliderTimeout);
-        }
-
-        startSlider();
+        });
     }
-
-
-
-   let bannerSlider = new Swiper(".banner-slider", {
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-
 });
 
 

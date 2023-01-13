@@ -1336,7 +1336,6 @@ body.modal_open {
 
 .section-banner {
   background-color: #3B88EF;
-  min-height: 700px;
   color: #FFFFFF;
   background-image: url(../assets/img/wave_blue_dark.svg);
   background-position: -40px bottom;
@@ -1395,8 +1394,9 @@ body.modal_open {
 }
 
 .banner-slider {
-  height: 100%;
+  position: relative;
   min-height: 700px;
+  height: 100%;
 }
 
 .banner-slider__slide {
@@ -1471,21 +1471,33 @@ body.modal_open {
   z-index: 4;
 }
 
-.banner-slider .slide-on .part {
-  clip-path: inset(0 0 0 0);
+.banner-slider .part {
+  position: relative;
+  display: flex;
+  overflow: hidden;
 }
 
-.banner-slider .part {
-  display: flex;
-  transition: 1.5s clip-path cubic-bezier(0.65, 0.05, 0.36, 1);
-  clip-path: inset(0 100% 0 0);
-  overflow: hidden;
+.banner-slider .part > * {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-slider .part-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .banner-slider .part_1 {
   align-items: flex-end;
   grid-area: 1 / 1 / 6 / 6;
   padding: 70px 51px 0;
+  pointer-events: none;
 }
 
 .banner-slider .part_1 img {
@@ -1512,18 +1524,6 @@ body.modal_open {
 
 .banner-slider .part_4 {
   grid-area: 4 / 8 / 6 / 10;
-  background-image: url(../assets/img/bg-slide_1.png);
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: contain;
-}
-
-.banner-slider .part_4.bg-yellow {
-  background-image: url(../assets/img/bg-slide.png);
-}
-
-.banner-slider .part_4.bg-green {
-  background-image: url(../assets/img/bg-slide_2.png);
 }
 
 .bg-warm {
@@ -2093,6 +2093,10 @@ body.modal_open {
     max-width: 910px;
     background-color: transparent;
     z-index: 900;
+  }
+
+  .header__nav.open {
+    display: block;
   }
 
   .btn-burger {
