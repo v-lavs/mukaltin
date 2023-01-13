@@ -1,6 +1,7 @@
 .menu {
   display: flex;
   font-family: $main-font;
+
   &__item {
     position: relative;
     text-align: center;
@@ -8,10 +9,12 @@
     font-size: 16px;
     line-height: 1;
     margin-left: 10px;
-    &:last-child:before{
+
+    &:last-child:before {
       display: none;
     }
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       display: block;
@@ -29,6 +32,7 @@
     padding: 10px 20px;
     color: #3B88EF;
     transition: color .35s;
+
     &:hover,
     &:focus {
       color: #FF7436;
@@ -36,24 +40,28 @@
   }
 
   @include respond-to($lg) {
-    width: 90%;
-    max-width: 910px;
-      background-color: #FFFFFF;
-      flex-direction: column;
-      border-radius: 10px;
-      overflow: hidden;
+
+    background-color: #FFFFFF;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+    padding: 40px 20px 20px;
+    overflow: hidden;
+
 
     .menu__item {
-      //margin-left: 34px;
-
-      &:first-child {
-        margin-left: 0;
+      font-size: 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(59, 136, 239, 0.1);
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
       }
+     &:before{
+       display: none;
+     }
     }
   }
   @media screen and (max-width: 720px) {
-    &__link {
-      padding: 5px 0;
-    }
+
   }
 }
