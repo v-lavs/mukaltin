@@ -5,9 +5,15 @@
   width: 100%;
   margin: 0 auto;
 
+
+  @include respond-to($xl) {
+    max-width: 1260px;
+    padding: 0 35px;
+  }
+
   @include respond-to($lg) {
     max-width: 1440px;
-    padding: 0 40px;
+    padding: 0 20px;
   }
 
   @include respond-to($md) {

@@ -1113,29 +1113,28 @@ body.modal_open {
   position: absolute;
   display: inline-block;
   border: none;
-  width: 98px;
-  height: 98px;
+  width: 47px;
+  height: 48px;
   background-color: #ffffff;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 2;
 }
 
 .btn_play:before {
   position: absolute;
   content: '';
   display: block;
-  width: 16px;
-  height: 17px;
-  background-image: url(../assets/img/triangle.svg);
+  width: 47px;
+  height: 48px;
+  background-image: url(../assets/img/play-video.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   top: 50%;
   left: 50%;
-  margin-left: 2px;
   transform: translate(-50%, -50%);
 }
 
@@ -1491,13 +1490,31 @@ body.modal_open {
 }
 
 .section-how-take {
+  position: relative;
+  padding-top: 157px;
   padding-bottom: 80px;
+}
+
+.section-how-take:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -6%;
+  top: -36%;
+  width: 480px;
+  height: 646px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url("../assets/img/leafes-bg-left.svg");
 }
 
 .section-how-take__footer {
   background: #2F766E;
   border-radius: 10px;
   color: #FFFFFF;
+  margin-top: 80px;
+  padding: 40px 20px;
 }
 
 .section-how-take__footer-title {
@@ -1746,21 +1763,41 @@ body.modal_open {
 
 .section-advantages {
   position: relative;
+  background-color: #FFC438;
+  padding-bottom: 40px;
 }
 
-.section-advantages:before {
+.section-advantages:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 224px;
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  transform: translateY(34%);
+  background-image: url("../assets/img/wave_yellow.svg");
+}
+
+.section-advantages .container.decor {
+  position: relative;
+}
+
+.section-advantages .container.decor:before {
   content: '';
   display: block;
   position: absolute;
   right: 0;
   top: 0;
   background: url("../assets/img/advantages-bg.svg") no-repeat;
-  -webkit-background-size: auto 100%;
   background-size: auto 100%;
   width: 426px;
   height: 481px;
   transform: translate(21%, -34%);
-  z-index: 4;
+  z-index: 2;
 }
 
 .section-advantages .section-advantages__layout {
@@ -1793,7 +1830,7 @@ body.modal_open {
   background: #FDE6D9;
   border-radius: 10px;
   overflow: hidden;
-  z-index: 4;
+  z-index: 2;
 }
 
 .section-advantages .part_left {
@@ -1913,10 +1950,17 @@ body.modal_open {
   object-fit: cover;
 }
 
+@media only screen and (max-width: 1440px) {
+  .container {
+    max-width: 1260px;
+    padding: 0 35px;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .container {
     max-width: 1440px;
-    padding: 0 40px;
+    padding: 0 20px;
   }
 
   .section-banner .title {

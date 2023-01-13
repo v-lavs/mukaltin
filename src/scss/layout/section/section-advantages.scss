@@ -1,18 +1,39 @@
 .section-advantages {
   position: relative;
-  &:before {
+  background-color: #FFC438;
+  padding-bottom: 40px;
+
+  &:after {
     content: '';
     display: block;
     position: absolute;
     right: 0;
-    top: 0;
-    background: url("../assets/img/advantages-bg.svg") no-repeat;
-    -webkit-background-size: auto 100%;
+    left: 0;
+    bottom: 0;
+    height: 224px;
     background-size: auto 100%;
-    width: 426px;
-    height: 481px;
-    transform: translate(21%, -34%);
-    z-index: 4;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    transform: translateY(34%);
+    background-image: url("../assets/img/wave_yellow.svg");
+  }
+
+  .container.decor {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: url("../assets/img/advantages-bg.svg") no-repeat;
+      background-size: auto 100%;
+      width: 426px;
+      height: 481px;
+      transform: translate(21%, -34%);
+      z-index: 2;
+    }
   }
 
   .section-advantages__layout {
@@ -45,7 +66,7 @@
     background: #FDE6D9;
     border-radius: 10px;
     overflow: hidden;
-    z-index: 4;
+    z-index: 2;
   }
 
   .part_left {
