@@ -7,8 +7,19 @@
 
 // CUSTOM SCRIPTS
 
-
 $(document).ready(function () {
+
+    // MOBILE MENU
+
+    const nav = $('.header__nav');
+
+    $('.btn-burger').on('click', function (e) {
+        e.preventDefault();
+        nav.toggleClass('open');
+        $(this).toggleClass('open');
+        $('body').toggleClass('modal_open');
+    });
+
     // SLIDER WITH MASK
     const slider = document.querySelector('.banner-slider');
 

@@ -35,18 +35,22 @@
     }
   }
 
-  //@include respond-to($lg) {
-  //  .menu__item {
-  //    //margin-left: 34px;
-  //
-  //    &:first-child {
-  //      margin-left: 0;
-  //    }
-  //  }
-  //}
-  //@media screen and (max-width: 720px) {
-  //  &__link {
-  //    padding: 5px 0;
-  //  }
-  //}
+  @include respond-to($lg) {
+    .menu{
+      flex-direction: column;
+
+    }
+    .menu__item {
+      //margin-left: 34px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 720px) {
+    &__link {
+      padding: 5px 0;
+    }
+  }
 }

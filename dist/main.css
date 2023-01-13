@@ -1161,8 +1161,8 @@ body.modal_open {
   right: 0;
   top: 20px;
   background-color: transparent;
-  z-index: 100;
   padding: 0 40px;
+  z-index: 1000;
 }
 
 .header__inner {
@@ -1184,6 +1184,62 @@ body.modal_open {
 .header__logo img {
   max-width: 100%;
   height: auto;
+}
+
+.btn-burger {
+  display: none;
+  border: none;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  z-index: 950;
+}
+
+.btn-burger .line {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #3B88EF;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.btn-burger .line:nth-child(1) {
+  top: 0;
+  transform-origin: left center;
+}
+
+.btn-burger .line:nth-child(2) {
+  top: 11px;
+  transform-origin: left center;
+}
+
+.btn-burger .line:nth-child(3) {
+  top: 22px;
+  transform-origin: left center;
+}
+
+.btn-burger.open .line:nth-child(1) {
+  transform: rotate(45deg);
+  top: 3px;
+  left: 4px;
+}
+
+.btn-burger.open .line:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+
+.btn-burger.open .line:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 20px;
+  left: 4px;
 }
 
 .footer {
@@ -1499,10 +1555,10 @@ body.modal_open {
   content: '';
   display: block;
   position: absolute;
-  left: -5%;
-  top: -33%;
-  width: 434px;
-  height: 557px;
+  left: -6.5%;
+  top: -30%;
+  width: 439px;
+  height: 478px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1957,9 +2013,32 @@ body.modal_open {
 }
 
 @media only screen and (max-width: 1200px) {
+  .menu .menu {
+    flex-direction: column;
+  }
+
+  .menu .menu__item:first-child {
+    margin-left: 0;
+  }
+
   .container {
     max-width: 1440px;
     padding: 0 20px;
+  }
+
+  .header__nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+    width: 100%;
+    max-width: 910px;
+    background-color: transparent;
+    z-index: 900;
+  }
+
+  .btn-burger {
+    display: block;
   }
 
   .section-banner .title {
@@ -2014,6 +2093,12 @@ body.modal_open {
 
   .section-banner:after {
     display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .menu__link {
+    padding: 5px 0;
   }
 }
 
