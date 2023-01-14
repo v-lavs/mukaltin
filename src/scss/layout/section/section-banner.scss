@@ -295,6 +295,7 @@
 
       .btn {
         flex-grow: 1;
+        padding: 12px;
         margin-bottom: 10px;
 
         &:last-child {
@@ -396,10 +397,11 @@
 
     img {
       position: absolute;
-      max-width: 45%;
-      left: 40px;
+      max-width: 40%;
+      margin-left: auto;
+      left: 50%;
       top: 50%;
-      transform: translate(0%, -42%);
+      transform: translate(-100%, -42%);
       z-index: 1;
     }
   }
@@ -410,6 +412,7 @@
     img {
       width: auto;
       height: 100%;
+      max-width: none;
       margin: 0 auto;
     }
   }
@@ -454,7 +457,22 @@
   .section-banner__part-right {
     padding-top: 40px;
     padding-bottom: 20px;
+    max-width: 480px;
+    width: 100%;
+    margin: auto;
   }
+  .section-banner .text_sm {
+    font-size: 16px;
+  }
+
+  .section-banner .text_md {
+    font-size: 20px;
+  }
+
+  .section-banner__slogan {
+    font-size: 16px;
+  }
+
   .banner-slider {
     min-height: 490px;
 
@@ -467,16 +485,29 @@
       height: 105px;
     }
   }
+
   .banner-slider__number,
   .banner-slider__text {
     font-size: 20px;
   }
+
   .banner-slider .part_2 {
     padding-right: 18px;
   }
-  .section-banner{
-    background-position: 0 bottom;
-    background-size: 158px 172px;
+
+  .section-banner {
+    background-position: center bottom;
+    background-size: 110px 120px;
+
+    .wrap-img img {
+      max-width: 45%;
+      left: 50%;
+      top: 24px;
+      transform: translate(-100%, -2%);
+    }
+  }
+  .section-banner .btns-wrap {
+    width: 100%;
   }
 }
 

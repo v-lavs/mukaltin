@@ -15,9 +15,7 @@ function destroySwiper(sliderInstance) {
 }
 
 $(document).ready(function () {
-
     // MOBILE MENU
-
     const nav = $('.header__nav');
 
     $('.btn-burger').on('click', function (e) {
@@ -28,9 +26,9 @@ $(document).ready(function () {
     });
 
     $('.menu__link').click(function (e) {
-        $('.btn-burger').toggleClass('open');
-        nav.toggleClass('open');
-        $('body').toggleClass('modal_open');
+        $('.btn-burger').removeClass('open');
+        nav.removeClass('open');
+        $('body').removeClass('modal_open');
     });
 
     // SLIDER WITH MASK
