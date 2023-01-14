@@ -269,12 +269,19 @@
 @include respond-to($lg) {
   .banner-slider {
     min-height: 517px;
+    &__text{
+      font-size: 20px;
+    }
+    &__number{
+      font-size: 24px;
+    }
   }
   .section-banner {
     &__part-right {
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
+      padding-bottom: 65px;
     }
 
     &__slogan {
@@ -284,6 +291,7 @@
     .wrap-img {
       max-width: 230px;
       width: 50%;
+      margin-bottom: 0;
     }
 
     .btns-wrap {
@@ -292,9 +300,15 @@
 
       .btn {
         max-width: 162px;
-      }
-      .btn_stroke{
+        margin-bottom: 10px;
 
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .btn_stroke .btn__icon {
+        display: none;
       }
     }
   }
@@ -309,6 +323,7 @@
     .banner-img-wrap_1 {
       width: 150px;
       height: 80px;
+      padding-top: 80px;
     }
 
     .banner-img-wrap_2 {

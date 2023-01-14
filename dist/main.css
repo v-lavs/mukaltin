@@ -2313,10 +2313,19 @@ body.modal_open {
     min-height: 517px;
   }
 
+  .banner-slider__text {
+    font-size: 20px;
+  }
+
+  .banner-slider__number {
+    font-size: 24px;
+  }
+
   .section-banner__part-right {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    padding-bottom: 65px;
   }
 
   .section-banner__slogan {
@@ -2326,6 +2335,7 @@ body.modal_open {
   .section-banner .wrap-img {
     max-width: 230px;
     width: 50%;
+    margin-bottom: 0;
   }
 
   .section-banner .btns-wrap {
@@ -2335,6 +2345,15 @@ body.modal_open {
 
   .section-banner .btns-wrap .btn {
     max-width: 162px;
+    margin-bottom: 10px;
+  }
+
+  .section-banner .btns-wrap .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-banner .btns-wrap .btn_stroke .btn__icon {
+    display: none;
   }
 
   .section-banner .container {
@@ -2739,6 +2758,7 @@ body.modal_open {
   .section-banner .banner-img-wrap_1 {
     width: 150px;
     height: 80px;
+    padding-top: 80px;
   }
 
   .section-banner .banner-img-wrap_2 {
