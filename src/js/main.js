@@ -20,6 +20,11 @@ $(document).ready(function () {
         $('body').toggleClass('modal_open');
     });
 
+    $('.backdrop, .menu__link').click(function (e) {
+        nav.removeClass('open');
+        $('body').removeClass('modal_open');
+    });
+
     // SLIDER WITH MASK
     const slider = document.querySelector('.banner-slider');
 
@@ -108,6 +113,38 @@ $(document).ready(function () {
             }
         });
     }
+
+
+    let specificSlider;
+    const specificSlider = $('.specifics__card-slider').get(0);
+
+    function handleResponsive() {
+
+        // DESTROY SLIDER INSTANCES
+
+        if ($(window).outerWidth() <= 1160) {
+            if (!specificSlider && specificSlider) {
+                specificSlider = new Swiper(".specifics__card-slider", {
+                    slidesPerView: 2.25,
+                });
+            }
+        } else {
+            destroySwiper(specificSlider);
+            specificSlider = null;
+        }
+    }
+
+    let resizeId;
+
+
+    handleResponsive();
+
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(handleResponsive, 500);
+    });
+
+
 
     // Circle cards start here
     var swiper = new Swiper(".mySwiper", {});
