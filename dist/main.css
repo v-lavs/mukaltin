@@ -2477,6 +2477,10 @@ body.modal_open {
 }
 
 @media only screen and (max-width: 767px) {
+  .container {
+    padding: 0 14px;
+  }
+
   .footer .social-bar {
     margin-bottom: 40px;
   }
@@ -2506,14 +2510,9 @@ body.modal_open {
   }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 480px) {
   body {
     font-size: 16px;
-  }
-
-  .container {
-    max-width: 420px;
-    padding: 0 14px;
   }
 
   .section-banner {
