@@ -263,6 +263,13 @@
 }
 
 @include respond-to($xs) {
+  .section-circumstances {
+
+    .section-bg {
+      height: 117px;
+      background-size: 111px 140px;
+    }
+  }
   .circumstances-image {
     display: none !important;
   }

@@ -142,8 +142,8 @@ $(document).ready(function () {
                 specificSlider = new Swiper('.specifics__card-slider', {
                     slidesPerView: 'auto',
                     navigation: {
-                        nextEl: ".slider__arrow_next",
-                        prevEl: ".slider__arrow_prev",
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
                     },
                 });
             }

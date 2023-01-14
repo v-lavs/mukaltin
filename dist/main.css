@@ -1842,6 +1842,11 @@ body.modal_open {
   display: none;
 }
 
+.section-specifics .swiper-button-next,
+.section-specifics .swiper-button-prev {
+  display: none;
+}
+
 .section-how-take {
   position: relative;
   padding-top: 157px;
@@ -2522,6 +2527,7 @@ body.modal_open {
 
   .section-specifics .specifics__card-slider {
     position: relative;
+    padding-bottom: 88px;
   }
 
   .section-specifics .swiper-slide:nth-child(n) {
@@ -2535,6 +2541,51 @@ body.modal_open {
     height: auto;
     -webkit-transform: none;
     transform: none;
+  }
+
+  .section-specifics .swiper-button-next,
+  .section-specifics .swiper-button-prev {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #3B88EF;
+    border-radius: 50%;
+    background-color: transparent;
+    top: auto;
+    bottom: 0;
+    margin: 0 -5px;
+  }
+
+  .section-specifics .swiper-button-next:after,
+  .section-specifics .swiper-button-prev:after {
+    display: none;
+  }
+
+  .section-specifics .swiper-button-next:before,
+  .section-specifics .swiper-button-prev:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-image: url(../assets/img/arrow-ios-forward-blue.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+  }
+
+  .section-specifics .swiper-button-next {
+    right: 50%;
+    transform: translateX(100%);
+  }
+
+  .section-specifics .swiper-button-prev {
+    left: 50%;
+    transform: translateX(-100%) rotate(180deg);
   }
 
   .section-how-take:before {
@@ -3011,6 +3062,10 @@ body.modal_open {
     margin-right: 20px;
   }
 
+  .section-specifics .section__header {
+    margin-bottom: 24px;
+  }
+
   .section-specifics .section__title {
     margin-bottom: 20px;
   }
@@ -3039,6 +3094,27 @@ body.modal_open {
     width: 70px;
     height: 70px;
     margin-bottom: 10px;
+  }
+
+  .section-specifics .swiper-button-next,
+  .section-specifics .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    margin: 0 -8px;
+  }
+
+  .section-specifics .swiper-button-next:before,
+  .section-specifics .swiper-button-prev:before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .section-specifics .specifics__card-slider {
+    padding-bottom: 52px;
+  }
+
+  .section-specifics__inner {
+    padding-bottom: 50px;
   }
 
   .section-how-take__footer-title {
@@ -3080,6 +3156,11 @@ body.modal_open {
   .section-how-take__title .title_lg {
     font-size: 34px;
     color: #3B88EF;
+  }
+
+  .section-circumstances .section-bg {
+    height: 117px;
+    background-size: 111px 140px;
   }
 
   .circumstances-image {
