@@ -52,7 +52,7 @@
     }
   }
 
-  .btn {
+  .btn:nth-child(n) {
     margin-right: 8px;
     padding: 19px 20px;
   }
@@ -294,7 +294,7 @@
       width: 50%;
 
       .btn {
-        max-width: 162px;
+        flex-grow: 1;
         margin-bottom: 10px;
 
         &:last-child {
