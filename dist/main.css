@@ -1901,7 +1901,7 @@ body.modal_open {
   flex-grow: 1;
 }
 
-.section-how-take .section-how-take__title {
+.section-how-take__title {
   display: none;
 }
 
@@ -3030,15 +3030,15 @@ body.modal_open {
   }
 
   .section-how-take__title {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    text-transform: uppercase;
     text-align: center;
-    font-size: 1px;
+    font-size: 16px;
     margin: 0 auto 8px;
   }
 
   .section-how-take__title .title_lg {
-    font-size: 39px;
+    font-size: 34px;
     color: #3B88EF;
   }
 
