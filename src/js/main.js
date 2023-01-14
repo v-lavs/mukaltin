@@ -71,6 +71,10 @@ $(document).ready(function () {
         const next_btn = $('.banner-slider .next-slide-btn');
         const prev_btn = $('.banner-slider .prev-slide-btn');
 
+        if (active_slide_index === 0) {
+            prev_btn.addClass('disabled');
+        }
+
         let is_animating = false;
 
         function goToSlide(currSlide, nextSlide) {
@@ -93,14 +97,16 @@ $(document).ready(function () {
         next_btn.click(function (e) {
             if (!is_animating) {
                 const currSlide = slides[active_slide_index];
-                const nextSlide = slides[active_slide_index + 1];
-                if (!nextSlide) {
-                    $(this).addClass('disabled');
-                    $(prev_btn).removeClass('disabled');
-                }
+                const nextSlideIndex = active_slide_index + 1;
+                const nextSlide = slides[nextSlideIndex];
+
                 if (currSlide && nextSlide) {
+                    if ((nextSlideIndex) === (slides.length - 1)) {
+                        next_btn.addClass('disabled');
+                    }
+                    $(prev_btn).removeClass('disabled');
                     goToSlide(currSlide, nextSlide);
-                    active_slide_index++;
+                    active_slide_index = nextSlideIndex;
                 }
             }
         });
@@ -108,12 +114,14 @@ $(document).ready(function () {
         prev_btn.click(function (e) {
             if (!is_animating) {
                 const currSlide = slides[active_slide_index];
-                const prevSlide = slides[active_slide_index - 1];
-                if (!prevSlide) {
-                    $(this).addClass('disabled');
-                    $(next_btn).removeClass('disabled');
-                }
+                const prevIndex = active_slide_index - 1;
+                const prevSlide = slides[prevIndex];
+
                 if (currSlide && prevSlide) {
+                    $(next_btn).removeClass('disabled');
+                    if (prevIndex === 0) {
+                        prev_btn.addClass('disabled');
+                    }
                     goToSlide(currSlide, prevSlide);
                     active_slide_index--;
                 }
