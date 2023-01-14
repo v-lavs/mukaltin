@@ -1148,6 +1148,50 @@ body.modal_open {
   width: 100%;
 }
 
+.custom-popover {
+  position: absolute;
+  max-width: 310px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #F2EFED;
+  border-radius: 10px;
+  padding: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #39414D;
+  display: none;
+  z-index: 1000;
+}
+
+.custom-popover.active {
+  display: block;
+}
+
+.custom-popover__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3B88EF;
+}
+
+.custom-popover__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: #FF7436;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  transform: translate(-50%, 50%);
+  z-index: 1;
+}
+
 .container {
   max-width: 1366px;
   padding: 0 60px;

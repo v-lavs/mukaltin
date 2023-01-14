@@ -161,6 +161,30 @@ $(document).ready(function () {
         clearTimeout(resizeId);
         resizeId = setTimeout(handleResponsive, 500);
     });
+
+
+    function handlePopover() {
+        $('.popover-trigger').click(function (e) {
+            e.preventDefault();
+            const popover = $('.custom-popover');
+            popover.addClass('active');
+
+
+            const clientRect = $(this).get(0).getBoundingClientRect();
+            const topOffset = $(this).offset().top
+
+            const margin = 30;
+            const popoverWidth = popover.outerWidth();
+            const windowW = $(window).width();
+
+            const isRight = windowW - clientRect.x - clientRect.width - margin;
+            const isLeft = clientRect.x - margin;
+
+            popover.css({top: topOffset - margin, left: 0});
+        });
+    }
+
+    handlePopover()
 });
 
 
