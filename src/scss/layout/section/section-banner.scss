@@ -269,10 +269,12 @@
 @include respond-to($lg) {
   .banner-slider {
     min-height: 517px;
-    &__text{
+
+    &__text {
       font-size: 20px;
     }
-    &__number{
+
+    &__number {
       font-size: 24px;
     }
   }
@@ -323,7 +325,6 @@
     .banner-img-wrap_1 {
       width: 150px;
       height: 80px;
-      padding-top: 80px;
     }
 
     .banner-img-wrap_2 {
@@ -347,6 +348,7 @@
       height: 145px;
     }
   }
+
 }
 
 @include respond-to($lg) {
@@ -381,7 +383,7 @@
 
   .section-banner__part-right {
     position: relative;
-    padding: 60px 20px 30px;
+    padding: 60px 40px 30px;
   }
 
   .section-banner .btns-wrap,
@@ -400,19 +402,65 @@
 
     img {
       position: absolute;
-      max-width: 50%;
-      left: 0;
+      max-width: 45%;
+      left: 40px;
       top: 50%;
       transform: translate(0%, -42%);
       z-index: 1;
     }
   }
+  .banner-slider .part_1 img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .section-banner .text_sm {
+    font-size: 26px;
+  }
+  .section-banner .text_md {
+    font-size: 32px;
+  }
+  .section-banner__slogan {
+    font-size: 22px;
+  }
+  .section-banner__part-right {
+    flex-direction: column
+  }
+  .section-banner .btns-wrap{
+    flex-direction: revert;
+  }
+  .section-banner .btns-wrap .btn{
+    margin-bottom: 0;
+  }
 }
 
 @include respond-to($sm) {
+  .section-banner__part-right {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .banner-slider__number,
+  .banner-slider .part_2{
+    font-size: 20px;
+  }
+
 }
 
 @include respond-to($xs) {
+  .banner-slider__number,
+  .banner-slider .part_2{
+    font-size: 16px;
+  }
+  .section-banner .text_sm {
+    font-size: 16px;
+  }
+  .section-banner .text_md {
+    font-size: 20px;
+  }
+  .section-banner__slogan {
+    font-size: 16px;
+  }
+
 }
 
 

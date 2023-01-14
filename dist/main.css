@@ -2573,7 +2573,7 @@ body.modal_open {
 
   .section-banner__part-right {
     position: relative;
-    padding: 60px 20px 30px;
+    padding: 60px 40px 30px;
   }
 
   .section-banner .btns-wrap,
@@ -2593,11 +2593,41 @@ body.modal_open {
 
   .section-banner .wrap-img img {
     position: absolute;
-    max-width: 50%;
-    left: 0;
+    max-width: 45%;
+    left: 40px;
     top: 50%;
     transform: translate(0%, -42%);
     z-index: 1;
+  }
+
+  .banner-slider .part_1 img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .section-banner .text_sm {
+    font-size: 26px;
+  }
+
+  .section-banner .text_md {
+    font-size: 32px;
+  }
+
+  .section-banner__slogan {
+    font-size: 22px;
+  }
+
+  .section-banner__part-right {
+    flex-direction: column;
+  }
+
+  .section-banner .btns-wrap {
+    flex-direction: revert;
+  }
+
+  .section-banner .btns-wrap .btn {
+    margin-bottom: 0;
   }
 
   .section-how-take .d-flex {
@@ -2678,6 +2708,16 @@ body.modal_open {
     margin-bottom: 0;
   }
 
+  .section-banner__part-right {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .banner-slider__number,
+  .banner-slider .part_2 {
+    font-size: 20px;
+  }
+
   .section-how-take__footer {
     padding: 20px;
   }
@@ -2693,6 +2733,11 @@ body.modal_open {
   }
 
   .title_md {
+    font-size: 16px;
+  }
+
+  .banner-slider__number,
+  .banner-slider .part_2 {
     font-size: 16px;
   }
 
@@ -2758,7 +2803,6 @@ body.modal_open {
   .section-banner .banner-img-wrap_1 {
     width: 150px;
     height: 80px;
-    padding-top: 80px;
   }
 
   .section-banner .banner-img-wrap_2 {
