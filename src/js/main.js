@@ -114,8 +114,6 @@ $(document).ready(function () {
         });
     }
 
-    let specificSlider;
-
 
     let specificSlider;
     const specificSlider = $('.specifics__card-slider').get(0);
