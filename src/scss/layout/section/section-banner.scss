@@ -37,6 +37,7 @@
 
   .container {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
   }
 
@@ -247,107 +248,67 @@
 
 @include respond-to($lg) {
   .section-banner {
-    .title {
-      font-size: 58px;
-      margin-bottom: 60px;
+    .container {
+      max-width: none;
+      padding: 0;
     }
-
-    .btn_main {
-      margin-bottom: 100px;
+    .btn {
+      font-size: 16px;
+      line-height: 19px;
+      padding: 10px 15px;
+      flex-grow: 1;
     }
   }
-}
 
-@include respond-to($lg) {
-  .section-banner {
-    .line {
-      &_1 {
-        left: 3%;
-      }
-
-      &_2 {
-        left: 67%;
-      }
-
-      &_3 {
-        right: 4.5%;
-      }
-    }
+  .section-banner__part-left {
+    width: 58%;
+  }
+  .section-banner__part-right {
+    width: 42%;
+    padding-left: 40px;
   }
 }
 
 @include respond-to($md) {
-  .section-banner {
-    padding-top: 136px;
-    padding-bottom: 75px;
+  .section-banner__part-left,
+  .section-banner__part-right {
+    width: 100%;
+  }
 
-    .line {
-      &_1 {
-        left: 8.25%;
-      }
+  .section-banner__part-right {
+    position: relative;
+    padding: 60px 20px 30px;
+  }
 
-      &_2 {
-        left: 73%;
-      }
+  .section-banner .btns-wrap,
+  .section-banner__slogan, {
+    width: 50%;
+    margin-left: auto;
+  }
 
-      &_3 {
-        right: 7%;
-      }
+  .section-banner__slogan {
+    margin-bottom: 80px;
+  }
+
+  .section-banner .wrap-img {
+    width: 50%;
+    margin: 0;
+
+    img {
+      position: absolute;
+      max-width: 50%;
+      left: 0;
+      top: 50%;
+      transform: translate(0%, -42%);
+      z-index: 1;
     }
   }
 }
 
 @include respond-to($sm) {
-  .section-banner {
-    padding-top: 150px;
-
-    &:after {
-      display: none;
-    }
-  }
 }
 
 @include respond-to($xs) {
-  .section-banner {
-    padding-bottom: 194px;
-
-    &__content {
-      padding-bottom: 270px;
-    }
-
-    &:before {
-      display: none;
-    }
-
-    .title {
-      font-size: 40px;
-    }
-
-    .line {
-      display: none;
-    }
-
-
-    .banner-img-wrap_1 {
-      left: 38px;
-    }
-
-    .banner-img-wrap_3 {
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-75%);
-    }
-
-    .banner-img-wrap_5 {
-      right: -20px;
-    }
-
-    .banner-img-wrap_4 {
-      right: 90px;
-      bottom: -188px;
-    }
-  }
 }
 
 
