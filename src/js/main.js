@@ -20,6 +20,11 @@ $(document).ready(function () {
         $('body').toggleClass('modal_open');
     });
 
+    $('.backdrop, .menu__link').click(function (e) {
+        nav.removeClass('open');
+        $('body').removeClass('modal_open');
+    });
+
     // SLIDER WITH MASK
     const slider = document.querySelector('.banner-slider');
 
