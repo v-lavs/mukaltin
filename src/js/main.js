@@ -26,7 +26,7 @@ $(document).ready(function () {
     if (slider) {
         const BG_TRANSITION = 800;
         const CONTENT_TRANSITION = 800;
-        const TIMEOUT_OVERLAP = 200
+        const TIMEOUT_OVERLAP = 50
         const transitionStyles = document.createElement('style');
 
         const transition_rules = "\n" +
@@ -108,6 +108,9 @@ $(document).ready(function () {
             }
         });
     }
+
+    // Circle cards start here
+    var swiper = new Swiper(".mySwiper", {});
 });
 
 

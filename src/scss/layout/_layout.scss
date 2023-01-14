@@ -8,20 +8,19 @@
 
   @include respond-to($xl) {
     max-width: 1260px;
-    padding: 0 35px;
+    padding: 0 30px;
   }
 
   @include respond-to($lg) {
-    max-width: 1440px;
+    max-width: 992px;
     padding: 0 20px;
   }
 
   @include respond-to($md) {
-    max-width: 610px
+    max-width: 767px;
   }
 
-  @include respond-to($xs) {
-    max-width: 420px;
+  @include respond-to($sm) {
     padding: 0 14px;
   }
 }
