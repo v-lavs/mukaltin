@@ -159,6 +159,11 @@
       display: none;
     }
   }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }
 
 @include respond-to($lg) {
@@ -202,6 +207,7 @@
 
     .specifics__card-slider {
       position: relative;
+      padding-bottom: 88px;
     }
 
     .swiper-slide:nth-child(n) {
@@ -215,6 +221,51 @@
       height: auto;
       -webkit-transform: none;
       transform: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: block;
+      width: 48px;
+      height: 48px;
+      border: 2px solid #3B88EF;
+      border-radius: 50%;
+      background-color: transparent;
+      top: auto;
+      bottom: 0;
+      margin: 0 -5px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      display: none;
+    }
+
+    .swiper-button-next:before,
+    .swiper-button-prev:before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      background-image: url(../assets/img/arrow-ios-forward-blue.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      z-index: 1;
+    }
+
+    .swiper-button-next {
+      right: 50%;
+      transform: translateX(100%);
+    }
+
+    .swiper-button-prev {
+      left: 50%;
+      transform: translateX(-100%) rotate(180deg);
     }
   }
 }
@@ -241,7 +292,9 @@
       padding-right: 0;
       margin-right: 20px;
     }
-
+    .section__header {
+      margin-bottom: 24px;
+    }
     .section__title {
       margin-bottom: 20px;
     }
@@ -270,6 +323,25 @@
         height: 70px;
         margin-bottom: 10px;
       }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 32px;
+      height: 32px;
+      margin: 0 -8px;
+    }
+
+    .swiper-button-next:before,
+    .swiper-button-prev:before {
+      width: 16px;
+      height: 16px;
+    }
+    .specifics__card-slider {
+      padding-bottom: 52px;
+    }
+&__inner {
+      padding-bottom: 50px;
     }
   }
 }
