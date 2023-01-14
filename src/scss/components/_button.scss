@@ -9,39 +9,76 @@
   border: 1px solid transparent;
   transition: .5s;
   padding: 19px 64px;
+
   &__icon {
     width: 24px;
     height: 24px;
     display: inline-block;
     margin-right: 8px;
+
     svg {
       max-width: 100%;
       display: inline-block;
     }
   }
 
-  &:hover,
-  &:focus {
-  }
-
   &_white {
     background-color: #FFFFFF;
     color: #3B88EF;
+
+    &:hover,
+    &:focus {
+      background-color: #E6E6E6;
+    }
   }
 
-  &_warm{
+  &_warm {
     background-color: #FF7436;
     color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+      background-color: #FFA44F;
+    }
+
+    &:active {
+      background-color: #E66831;
+    }
   }
 
   &_stroke {
     background-color: transparent;
     border-color: #FFFFFF;
     color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+      background-color: #FFFFFF;
+      color: #3B88EF;
+    }
+
+    &:active {
+      background-color: #E6E6E6;
+      border-color: #E6E6E6;
+      color: #3B88EF;
+    }
   }
-  &_stroke-blue{
+
+  &_stroke-blue {
     color: #3B88EF;
     border-color: #3B88EF;
+
+    &:hover,
+    &:focus {
+      background-color: #3B88EF;
+      color: #FFFFFF;
+    }
+
+    &:active {
+      background-color: #3274CC;
+      border-color: #3274CC;
+      color: #FFFFFF;
+    }
   }
 }
 

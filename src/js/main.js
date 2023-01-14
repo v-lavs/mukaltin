@@ -27,9 +27,10 @@ $(document).ready(function () {
         $('body').toggleClass('modal_open');
     });
 
-    $('.backdrop, .menu__link').click(function (e) {
-        nav.removeClass('open');
-        $('body').removeClass('modal_open');
+    $('.menu__link').click(function (e) {
+        $('.btn-burger').toggleClass('open');
+        nav.toggleClass('open');
+        $('body').toggleClass('modal_open');
     });
 
     // SLIDER WITH MASK

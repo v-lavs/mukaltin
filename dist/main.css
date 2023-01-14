@@ -1094,9 +1094,23 @@ body.modal_open {
   color: #3B88EF;
 }
 
+.btn_white:hover,
+.btn_white:focus {
+  background-color: #E6E6E6;
+}
+
 .btn_warm {
   background-color: #FF7436;
   color: #FFFFFF;
+}
+
+.btn_warm:hover,
+.btn_warm:focus {
+  background-color: #FFA44F;
+}
+
+.btn_warm:active {
+  background-color: #E66831;
 }
 
 .btn_stroke {
@@ -1105,9 +1119,33 @@ body.modal_open {
   color: #FFFFFF;
 }
 
+.btn_stroke:hover,
+.btn_stroke:focus {
+  background-color: #FFFFFF;
+  color: #3B88EF;
+}
+
+.btn_stroke:active {
+  background-color: #E6E6E6;
+  border-color: #E6E6E6;
+  color: #3B88EF;
+}
+
 .btn_stroke-blue {
   color: #3B88EF;
   border-color: #3B88EF;
+}
+
+.btn_stroke-blue:hover,
+.btn_stroke-blue:focus {
+  background-color: #3B88EF;
+  color: #FFFFFF;
+}
+
+.btn_stroke-blue:active {
+  background-color: #3274CC;
+  border-color: #3274CC;
+  color: #FFFFFF;
 }
 
 .btn_play {
@@ -1202,7 +1240,7 @@ body.modal_open {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 20px;
@@ -1858,6 +1896,15 @@ body.modal_open {
   padding-top: 68px;
 }
 
+.section-how-take .btns-wrap .btn {
+  padding: 19px 20px;
+  flex-grow: 1;
+}
+
+.section-how-take .section-how-take__title {
+  display: none;
+}
+
 .card-take {
   position: relative;
   display: flex;
@@ -2087,9 +2134,9 @@ body.modal_open {
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 2px;
+  bottom: -1px;
   height: 224px;
-  background-size: auto 100%;
+  background-size: 203px 224px;
   background-repeat: repeat-x;
   background-position: 0 bottom;
   transform: translateY(34%);
@@ -2146,6 +2193,17 @@ body.modal_open {
   border-radius: 10px;
   overflow: hidden;
   z-index: 2;
+}
+
+.section-advantages .video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section-advantages .part_left {
@@ -2231,6 +2289,7 @@ body.modal_open {
 }
 
 .section-buy {
+  display: none;
   background-image: url(../assets/img/bg-sect-buy.png);
   background-repeat: repeat-x;
   background-position: 0 0;
@@ -2701,6 +2760,10 @@ body.modal_open {
     margin: 0 auto 40px;
   }
 
+  .section-how-take:before {
+    display: none;
+  }
+
   .section-how-take .d-flex {
     flex-wrap: wrap;
   }
@@ -2722,7 +2785,10 @@ body.modal_open {
   }
 
   .section-how-take .btns-wrap {
+    width: 100%;
+    max-width: 583px;
     padding-top: 30px;
+    margin: 0 auto;
   }
 
   .section-circumstances__inner {
@@ -2822,6 +2888,10 @@ body.modal_open {
 
   .section-specifics .section__title {
     font-size: 34px;
+  }
+
+  .section-how-take {
+    padding-top: 80px;
   }
 
   .section-how-take__footer {
@@ -2931,6 +3001,45 @@ body.modal_open {
     width: 70px;
     height: 70px;
     margin-bottom: 10px;
+  }
+
+  .section-how-take__footer-title {
+    font-size: 16px;
+  }
+
+  .section-how-take__footer {
+    margin-top: 30px;
+  }
+
+  .card-take {
+    margin-bottom: 20px;
+  }
+
+  .section-how-take .btns-wrap {
+    display: block;
+    padding-top: 10px;
+  }
+
+  .section-how-take .btns-wrap .btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .section-how-take .btns-wrap .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-how-take__title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1px;
+    margin: 0 auto 8px;
+  }
+
+  .section-how-take__title .title_lg {
+    font-size: 39px;
+    color: #3B88EF;
   }
 
   .circumstances-image {

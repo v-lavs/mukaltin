@@ -49,6 +49,14 @@
 
   .btns-wrap {
     padding-top: 68px;
+
+    .btn {
+      padding: 19px 20px;
+      flex-grow: 1;
+    }
+  }
+  .section-how-take__title{
+    display: none;
   }
 }
 
@@ -116,12 +124,12 @@
 
 }
 
-@include respond-to($lg) {
-
-}
-
 @include respond-to($md) {
   .section-how-take {
+    &:before {
+      display: none;
+    }
+
     .d-flex {
       flex-wrap: wrap;
     }
@@ -145,12 +153,18 @@
     }
 
     .btns-wrap {
+      width: 100%;
+      max-width: 583px;
       padding-top: 30px;
+      margin: 0 auto;
     }
   }
 }
 
 @include respond-to($sm) {
+  .section-how-take {
+    padding-top: 80px;
+  }
   .section-how-take__footer {
     padding: 20px;
   }
@@ -159,4 +173,36 @@
 
 @include respond-to($xs) {
 
+  .section-how-take__footer-title {
+    font-size: 16px;
+  }
+  .section-how-take__footer {
+    margin-top: 30px;
+  }
+  .card-take {
+    margin-bottom: 20px;
+  }
+  .section-how-take .btns-wrap {
+    display: block;
+    padding-top: 10px;
+
+    .btn {
+      margin-right: 0;
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .section-how-take__title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1px;
+    margin: 0 auto 8px;
+    .title_lg{
+      font-size: 39px;
+      color: #3B88EF;
+    }
+  }
 }
