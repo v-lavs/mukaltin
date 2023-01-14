@@ -124,10 +124,13 @@
 }
 
 @include respond-to($sm) {
-
+  .header {
+    .container {
+      padding: 0;
+    }
+  }
   .header__logo {
     max-width: 128px;
     height: 16px;
-
   }
 }

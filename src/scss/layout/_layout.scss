@@ -18,9 +18,10 @@
 
   @include respond-to($md) {
     max-width: 767px;
+    padding: 0 40px;
   }
 
-  @include respond-to($sm) {
+  @include respond-to($xs) {
     padding: 0 14px;
   }
 }

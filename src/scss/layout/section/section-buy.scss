@@ -45,8 +45,6 @@
 }
 @include respond-to($sm) {
   .section-buy {
-    background-color: red;
-
     &__title {
       font-size: 34px;
 
@@ -54,5 +52,21 @@
         font-size: 40px;
       }
     }
+  }
+}
+
+@include respond-to($xs) {
+  .section-buy__title {
+    font-size: 16px;
+    line-height: 19px;
+    .title_lg {
+      font-size: 34px;
+      line-height: 40px;
+    }
+    margin-bottom: 20px;
+  }
+
+  .section-buy {
+    padding-bottom: 40px;
   }
 }

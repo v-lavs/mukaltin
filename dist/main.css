@@ -2592,6 +2592,7 @@ body.modal_open {
 @media only screen and (max-width: 991px) {
   .container {
     max-width: 767px;
+    padding: 0 40px;
   }
 
   .footer__logo,
@@ -2762,8 +2763,8 @@ body.modal_open {
 }
 
 @media only screen and (max-width: 767px) {
-  .container {
-    padding: 0 14px;
+  .header .container {
+    padding: 0;
   }
 
   .header__logo {
@@ -2827,10 +2828,6 @@ body.modal_open {
     padding: 20px;
   }
 
-  .section-buy {
-    background-color: red;
-  }
-
   .section-buy__title {
     font-size: 34px;
   }
@@ -2845,12 +2842,28 @@ body.modal_open {
     font: 400 16px/1.2 "Exo 2", sans-serif;
   }
 
+  .literature-sources {
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 0;
+  }
+
+  .note {
+    padding: 20px 10px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
   .title_lg {
     font-size: 34px;
   }
 
   .title_md {
     font-size: 16px;
+  }
+
+  .container {
+    padding: 0 14px;
   }
 
   .banner-slider__number,
@@ -2941,6 +2954,21 @@ body.modal_open {
     max-width: none;
     width: 100%;
     margin: 0 0 10px;
+  }
+
+  .section-buy__title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+  }
+
+  .section-buy__title .title_lg {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .section-buy {
+    padding-bottom: 40px;
   }
 }
 

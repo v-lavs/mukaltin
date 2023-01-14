@@ -119,6 +119,11 @@ body {
     }
   }
 
+  @include respond-to($xs) {
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 0;
+  }
 }
 
 .note {
@@ -130,6 +135,12 @@ body {
   text-align: center;
   color: #39414D;
   margin-top: 40px;
+
+  @include respond-to($xs) {
+    padding: 20px 10px;
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .dynamic-content {
