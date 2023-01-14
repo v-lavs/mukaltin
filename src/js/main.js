@@ -114,6 +114,40 @@ $(document).ready(function () {
         });
     }
 
+    let specificSlider;
+
+
+    let specificSlider;
+    const specificSlider = $('.specifics__card-slider').get(0);
+
+    function handleResponsive() {
+
+        // DESTROY SLIDER INSTANCES
+
+        if ($(window).outerWidth() <= 1160) {
+            if (!specificSlider && specificSlider) {
+                specificSlider = new Swiper(".specifics__card-slider", {
+                    slidesPerView: 2.25,
+                });
+            }
+        } else {
+            destroySwiper(specificSlider);
+            specificSlider = null;
+        }
+    }
+
+    let resizeId;
+
+
+    handleResponsive();
+
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(handleResponsive, 500);
+    });
+
+
+
     // Circle cards start here
     var swiper = new Swiper(".mySwiper", {});
 });
