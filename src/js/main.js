@@ -164,24 +164,36 @@ $(document).ready(function () {
 
 
     function handlePopover() {
+        const popover = $('.custom-popover');
+        const popoverTitle = $('.custom-popover__title');
+        const popoverText = $('.custom-popover__text');
+
+
+        const closePopover = () => {
+            popoverText.html('');
+            popoverTitle.html('');
+            popover.removeClass('active');
+        }
+
         $('.popover-trigger').click(function (e) {
             e.preventDefault();
-            const popover = $('.custom-popover');
             popover.addClass('active');
 
+            const topOffset = $(this).offset().top;
+            const leftOffset = $(this).offset().left;
 
-            const clientRect = $(this).get(0).getBoundingClientRect();
-            const topOffset = $(this).offset().top
+            // insert texts
+            popoverTitle.html($(this).find('.card__title').text())
+            popoverText.html($(this).siblings('.card__text').html())
 
-            const margin = 30;
-            const popoverWidth = popover.outerWidth();
-            const windowW = $(window).width();
-
-            const isRight = windowW - clientRect.x - clientRect.width - margin;
-            const isLeft = clientRect.x - margin;
-
-            popover.css({top: topOffset - margin, left: 0});
+            // set popover position
+            popover.css({top: topOffset, left: leftOffset});
         });
+
+        $('.custom-popover__close').click(function (e) {
+            e.preventDefault();
+            closePopover();
+        })
     }
 
     handlePopover()
