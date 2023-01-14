@@ -2852,6 +2852,7 @@ body.modal_open {
 
   .section-circumstances__inner {
     padding-top: 0;
+    padding-bottom: 80px;
   }
 
   .circumstances-layout {
@@ -2873,13 +2874,27 @@ body.modal_open {
   }
 
   .circumstances-footer {
-    padding-top: 0;
     width: 100%;
     order: 3;
+    padding-top: 60px;
   }
 
   .circumstances-footer .btns-wrap {
+    width: 100%;
     flex-direction: row;
+  }
+
+  .circumstances-footer .btns-wrap .btn {
+    width: auto;
+    max-width: none;
+    padding: 20px 10px;
+    flex-grow: 1;
+    margin-right: 8px;
+    margin-top: 0;
+  }
+
+  .circumstances-footer .btns-wrap .btn:last-child {
+    margin-right: 0;
   }
 
   .section-advantages .section-advantages__footer-title {
@@ -3030,6 +3045,10 @@ body.modal_open {
     font: 400 16px/1.2 "Exo 2", sans-serif;
   }
 
+  .btn-buy {
+    right: 10px;
+  }
+
   .literature-sources {
     font-size: 16px;
     line-height: 19px;
@@ -3083,6 +3102,10 @@ body.modal_open {
 
   .section-banner__slogan {
     font-size: 16px;
+  }
+
+  .section-banner .btns-wrap .btn {
+    padding: 10px;
   }
 
   .section-specifics .swiper-slide:nth-child(n) {
@@ -3168,6 +3191,7 @@ body.modal_open {
   .section-how-take .btns-wrap .btn {
     margin-right: 0;
     margin-bottom: 10px;
+    padding: 10px;
   }
 
   .section-how-take .btns-wrap .btn:last-child {
@@ -3187,6 +3211,21 @@ body.modal_open {
     color: #3B88EF;
   }
 
+  .section-circumstances__inner {
+    padding-bottom: 64px;
+  }
+
+  .section-circumstances .btns-wrap {
+    display: block;
+    width: 100%;
+  }
+
+  .section-circumstances .btns-wrap .btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
   .section-circumstances .section-bg {
     height: 117px;
     background-size: 111px 140px;
@@ -3204,15 +3243,10 @@ body.modal_open {
     padding-top: 40px;
   }
 
-  .circumstances-footer .btns-wrap {
-    display: block;
-    width: 100%;
-  }
-
-  .circumstances-footer .btn {
-    max-width: none;
-    width: 100%;
-    margin: 0 0 10px;
+  .section-advantages .part_left:after {
+    width: 39px;
+    height: 246px;
+    background-size: contain;
   }
 
   .section-advantages .part_right {
@@ -3245,6 +3279,7 @@ body.modal_open {
   .section-advantages .btns-wrap .btn {
     margin-right: 0;
     margin-bottom: 10px;
+    padding: 10px;
   }
 
   .section-buy__title {

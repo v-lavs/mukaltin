@@ -100,6 +100,9 @@ body {
       fill: #FF621C;
     }
   }
+  @include respond-to($xs){
+    right: 10px;
+  }
 }
 
 .literature-sources {

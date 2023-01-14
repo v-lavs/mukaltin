@@ -238,7 +238,6 @@
 
     .btns-wrap {
       width: 100%;
-
       .btn {
         padding: 20px;
         flex-grow: 1;
@@ -259,6 +258,11 @@
 
 @include respond-to($xs) {
   .section-advantages {
+    .part_left:after {
+      width: 39px;
+      height: 246px;
+      background-size: contain;
+    }
     .part_right {
       padding-top: 70px;
       margin-bottom: 30px;
@@ -282,6 +286,7 @@
       .btn{
         margin-right: 0;
         margin-bottom: 10px;
+        padding: 10px;
       }
     }
   }
