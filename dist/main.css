@@ -1154,7 +1154,7 @@ body.modal_open {
   border: none;
   width: 47px;
   height: 48px;
-  background-color: #ffffff;
+  background-color: transparent;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -2360,6 +2360,10 @@ body.modal_open {
     display: none;
   }
 
+  .btn {
+    border-radius: 5px;
+  }
+
   .container {
     max-width: 992px;
     padding: 0 20px;
@@ -2533,6 +2537,10 @@ body.modal_open {
     transform: none;
   }
 
+  .section-how-take:before {
+    display: none;
+  }
+
   .section-circumstances:before,
   .section-circumstances:after {
     display: none;
@@ -2636,11 +2644,12 @@ body.modal_open {
     display: none;
   }
 
-  .section-advantages__article {
+  .section-advantages .section-advantages__article {
     width: 100%;
     max-width: 556px;
     margin: 0 auto;
     padding-bottom: 120px;
+    padding-top: 80px;
   }
 
   .section-advantages .section-advantages__footer-title {
@@ -2760,10 +2769,6 @@ body.modal_open {
     margin: 0 auto 40px;
   }
 
-  .section-how-take:before {
-    display: none;
-  }
-
   .section-how-take .d-flex {
     flex-wrap: wrap;
   }
@@ -2821,6 +2826,27 @@ body.modal_open {
 
   .circumstances-footer .btns-wrap {
     flex-direction: row;
+  }
+
+  .section-advantages .section-advantages__footer-title {
+    padding: 20px 10px;
+  }
+
+  .section-advantages .player-wrap {
+    padding-top: 56.5%;
+  }
+
+  .section-advantages .part_right {
+    margin-bottom: 46px;
+  }
+
+  .section-advantages .btns-wrap {
+    width: 100%;
+  }
+
+  .section-advantages .btns-wrap .btn {
+    padding: 20px;
+    flex-grow: 1;
   }
 
   .section-buy {
@@ -2896,6 +2922,18 @@ body.modal_open {
 
   .section-how-take__footer {
     padding: 20px;
+  }
+
+  .section-how-take__footer-title {
+    font-size: 30px;
+  }
+
+  .section-advantages__article-title {
+    font-size: 16px;
+  }
+
+  .section-advantages__article-title strong {
+    font-size: 34px;
   }
 
   .section-buy__title {
@@ -3009,6 +3047,8 @@ body.modal_open {
 
   .section-how-take__footer {
     margin-top: 30px;
+    padding: 10px;
+    border-radius: 4px;
   }
 
   .card-take {
@@ -3063,6 +3103,38 @@ body.modal_open {
     max-width: none;
     width: 100%;
     margin: 0 0 10px;
+  }
+
+  .section-advantages .part_right {
+    padding-top: 70px;
+    margin-bottom: 30px;
+  }
+
+  .section-advantages .section-advantages__article {
+    padding-bottom: 140px;
+  }
+
+  .section-advantages .section-advantages__article-title {
+    margin-bottom: 20px;
+  }
+
+  .section-advantages .section-advantages__article-title strong {
+    font-size: 16px;
+  }
+
+  .section-advantages .section-advantages__footer-title {
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  .section-advantages .btns-wrap {
+    display: block;
+    width: 100%;
+  }
+
+  .section-advantages .btns-wrap .btn {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
   .section-buy__title {

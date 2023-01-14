@@ -123,13 +123,15 @@
   }
 
 }
-
-@include respond-to($md) {
+@include respond-to($lg) {
   .section-how-take {
     &:before {
       display: none;
     }
-
+  }
+}
+@include respond-to($md) {
+  .section-how-take {
     .d-flex {
       flex-wrap: wrap;
     }
@@ -168,6 +170,9 @@
   .section-how-take__footer {
     padding: 20px;
   }
+  .section-how-take__footer-title {
+    font-size: 30px;
+  }
 }
 
 
@@ -178,6 +183,8 @@
   }
   .section-how-take__footer {
     margin-top: 30px;
+    padding: 10px;
+    border-radius: 4px;
   }
   .card-take {
     margin-bottom: 20px;

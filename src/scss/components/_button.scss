@@ -88,7 +88,7 @@
   border: none;
   width: 47px;
   height: 48px;
-  background-color: #ffffff;
+  background-color: transparent;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -110,5 +110,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+  }
+}
+
+@include respond-to($lg){
+  .btn{
+    border-radius: 5px;
   }
 }
