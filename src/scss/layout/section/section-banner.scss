@@ -228,7 +228,7 @@
       z-index: 1;
     }
 
-    &.disable {
+    &.disabled {
       opacity: .5;
     }
   }
@@ -258,6 +258,47 @@
   background-color: #FFF9D5;
 }
 
+@include respond-to($xl) {
+  .section-banner {
+    .container {
+      max-width: 100%;
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .banner-slider {
+    min-height: 517px;
+  }
+  .section-banner {
+    &__part-right {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &__slogan {
+      width: 100%;
+    }
+
+    .wrap-img {
+      max-width: 230px;
+      width: 50%;
+    }
+
+    .btns-wrap {
+      flex-direction: column;
+      width: 50%;
+
+      .btn {
+        max-width: 162px;
+      }
+      .btn_stroke{
+
+      }
+    }
+  }
+}
 
 @media screen and (max-height: 768px) {
   .section-banner {
