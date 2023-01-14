@@ -196,7 +196,7 @@
 
   &__nav {
     position: absolute;
-    bottom: 58px;
+    bottom: 53px;
     display: flex;
     right: 50%;
     transform: translateX(50%);
@@ -258,13 +258,6 @@
   background-color: #FFF9D5;
 }
 
-@include respond-to($xl) {
-  .section-banner {
-    .container {
-      max-width: 100%;
-    }
-  }
-}
 
 @include respond-to($lg) {
   .banner-slider {
@@ -399,6 +392,7 @@
   .section-banner .wrap-img {
     width: 50%;
     margin: 0;
+    padding-left: 20px;
 
     img {
       position: absolute;
@@ -409,10 +403,24 @@
       z-index: 1;
     }
   }
-  .banner-slider .part_1 img {
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
+  .banner-slider .part_1 {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    img {
+      width: auto;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+  .section-banner__part-right {
+    flex-direction: column
+  }
+  .section-banner .btns-wrap {
+    flex-direction: revert;
+  }
+  .section-banner .btns-wrap .btn {
+    margin-bottom: 0;
   }
   .section-banner .text_sm {
     font-size: 26px;
@@ -423,15 +431,23 @@
   .section-banner__slogan {
     font-size: 22px;
   }
-  .section-banner__part-right {
-    flex-direction: column
+  .banner-slider {
+    &__nav {
+      bottom: 40px;
+    }
+
+    .next-slide-btn,
+    .prev-slide-btn {
+      width: 32px;
+      height: 32px;
+
+      &:before {
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
-  .section-banner .btns-wrap{
-    flex-direction: revert;
-  }
-  .section-banner .btns-wrap .btn{
-    margin-bottom: 0;
-  }
+
 }
 
 @include respond-to($sm) {
@@ -439,17 +455,47 @@
     padding-top: 40px;
     padding-bottom: 20px;
   }
+  .banner-slider {
+    min-height: 490px;
+
+    &__slide {
+      grid-template-rows: 1fr 1fr 1.5fr .5fr 1fr;
+    }
+
+    &__slide:after {
+      width: 110px;
+      height: 105px;
+    }
+  }
   .banner-slider__number,
-  .banner-slider .part_2{
+  .banner-slider__text {
     font-size: 20px;
   }
-
+  .banner-slider .part_2 {
+    padding-right: 18px;
+  }
+  .section-banner{
+    background-position: 0 bottom;
+    background-size: 158px 172px;
+  }
 }
 
 @include respond-to($xs) {
   .banner-slider__number,
-  .banner-slider .part_2{
+  .banner-slider__text {
     font-size: 16px;
+  }
+  .banner-slider .part_2 {
+    padding-bottom: 20px;
+    padding-top: 85px;
+  }
+  .banner-slider {
+    min-height: 345px;
+
+    &__slide:after {
+      width: 70px;
+      height: 65px;
+    }
   }
   .section-banner .text_sm {
     font-size: 16px;

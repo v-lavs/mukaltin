@@ -10,8 +10,8 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding: 12px 40px;
     align-items: center;
+    padding: 12px 40px;
     background: #FFFFFF;
     box-shadow: 0 10px 15px rgba(44, 102, 179, 0.15);
     border-radius: 100px;
@@ -21,7 +21,6 @@
   &__logo {
     width: 189px;
     display: inline-block;
-    margin-left: 40px;
 
     img {
       max-width: 100%;
@@ -121,5 +120,14 @@
 
   .btn-burger {
     display: block;
+  }
+}
+
+@include respond-to($sm) {
+
+  .header__logo {
+    max-width: 128px;
+    height: 16px;
+
   }
 }

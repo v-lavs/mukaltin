@@ -40,6 +40,7 @@
     font-weight: 700;
     font-size: 62px;
     line-height: 1.2;
+    text-transform: uppercase;
     color: #39414D;
     text-align: center;
 
@@ -219,7 +220,11 @@
 }
 
 @include respond-to($md) {
-
+  .section-specifics {
+    .section__title {
+      font-size: 34px;
+    }
+  }
 }
 
 @include respond-to($sm) {
@@ -229,7 +234,9 @@
 @include respond-to($xs) {
   .section-specifics {
     .swiper-slide:nth-child(n) {
-      width: 166px;
+      width: 152px;
+      padding-right: 0;
+      margin-right: 20px;
     }
 
     .specifics__card {
@@ -239,6 +246,7 @@
         font-size: 16px;
         line-height: 19px;
         margin-bottom: 0;
+
         svg {
           width: 16px;
           height: 16px;
