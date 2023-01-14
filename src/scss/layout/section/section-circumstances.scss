@@ -56,7 +56,7 @@
   justify-content: space-between;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  //font-size: 20px;
   line-height: 24px;
   color: #39414D;
 
@@ -164,6 +164,12 @@
 
 
 @include respond-to($lg) {
+  .section-circumstances {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
   .circumstances-layout {
     display: flex;
     align-items: flex-end;
@@ -260,7 +266,9 @@
   .circumstances-image {
     display: none !important;
   }
-
+  .circumstances-item__title {
+    font-size: 16px;
+  }
   .circumstances-footer {
     padding-top: 40px;
 

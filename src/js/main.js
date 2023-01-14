@@ -7,6 +7,13 @@
 
 // CUSTOM SCRIPTS
 
+function destroySwiper(sliderInstance) {
+    if (sliderInstance instanceof Swiper && sliderInstance.initialized) {
+        sliderInstance.destroy(true, true);
+        console.log('destroy')
+    }
+}
+
 $(document).ready(function () {
 
     // MOBILE MENU
@@ -114,9 +121,8 @@ $(document).ready(function () {
         });
     }
 
-
-    let specificSlider;
-    const specificSlider = $('.specifics__card-slider').get(0);
+    //SLIDER SPECIFICS-CARD
+    let specificSlider  = $('.specifics__card-slider').get(0);
 
     function handleResponsive() {
 
@@ -125,7 +131,11 @@ $(document).ready(function () {
         if ($(window).outerWidth() <= 1160) {
             if (!specificSlider && specificSlider) {
                 specificSlider = new Swiper(".specifics__card-slider", {
-                    slidesPerView: 2.25,
+                    slidesPerView: 2.1,
+                    navigation: {
+                        nextEl: ".slider__arrow_next",
+                        prevEl: ".slider__arrow_prev",
+                    },
                 });
             }
         } else {

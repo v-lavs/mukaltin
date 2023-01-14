@@ -57,6 +57,7 @@
     right: 0;
     top: 0;
     z-index: 1;
+    overflow: visible;
   }
 
   .swiper-slide {
@@ -200,6 +201,7 @@
 
     .specifics__card-slider {
       position: relative;
+      overflow: hidden;
     }
 
     .swiper-slide:nth-child(n) {
