@@ -122,16 +122,16 @@ $(document).ready(function () {
     }
 
     //SLIDER SPECIFICS-CARD
-    let specificSlider  = $('.specifics__card-slider').get(0);
+    let specificSlider;
 
     function handleResponsive() {
 
         // DESTROY SLIDER INSTANCES
 
         if ($(window).outerWidth() <= 1160) {
-            if (!specificSlider && specificSlider) {
-                specificSlider = new Swiper(".specifics__card-slider", {
-                    slidesPerView: 2.1,
+            if (!specificSlider) {
+                specificSlider = new Swiper('.specifics__card-slider', {
+                    slidesPerView: 'auto',
                     navigation: {
                         nextEl: ".slider__arrow_next",
                         prevEl: ".slider__arrow_prev",
@@ -153,11 +153,6 @@ $(document).ready(function () {
         clearTimeout(resizeId);
         resizeId = setTimeout(handleResponsive, 500);
     });
-
-
-
-    // Circle cards start here
-    var swiper = new Swiper(".mySwiper", {});
 });
 
 

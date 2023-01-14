@@ -2278,7 +2278,7 @@ body.modal_open {
   }
 
   .section-specifics .section-specifics__circle {
-    max-width: none;
+    max-width: 100%;
   }
 
   .section-specifics .bg-image {
@@ -2316,7 +2316,6 @@ body.modal_open {
 
   .section-specifics .specifics__card-slider {
     position: relative;
-    overflow: hidden;
   }
 
   .section-specifics .swiper-slide:nth-child(n) {
