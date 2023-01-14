@@ -220,15 +220,18 @@
 }
 
 @include respond-to($md) {
+  .section__header {
+    max-width: 630px;
+    margin: 0 auto 40px;
+  }
+}
+
+@include respond-to($sm) {
   .section-specifics {
     .section__title {
       font-size: 34px;
     }
   }
-}
-
-@include respond-to($sm) {
-
 }
 
 @include respond-to($xs) {
@@ -237,6 +240,10 @@
       width: 152px;
       padding-right: 0;
       margin-right: 20px;
+    }
+
+    .section__title {
+      margin-bottom: 20px;
     }
 
     .specifics__card {

@@ -9,6 +9,7 @@
   &__title {
     text-align: center;
     margin: 0 auto 60px;
+    text-transform: uppercase;
     color: #FFFFFF;
   }
 
@@ -24,7 +25,8 @@
     border-radius: 10px;
     overflow: hidden;
   }
-  .geo-wgt{
+
+  .geo-wgt {
     position: absolute;
     left: 0;
     right: 0;
@@ -33,5 +35,24 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+}
+
+@include respond-to($md) {
+  .section-buy {
+    background-size: 147px 50%;
+  }
+}
+@include respond-to($sm) {
+  .section-buy {
+    background-color: red;
+
+    &__title {
+      font-size: 34px;
+
+      .title_lg {
+        font-size: 40px;
+      }
+    }
   }
 }

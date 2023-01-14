@@ -927,6 +927,7 @@ body.modal_open {
   font-size: 20px;
   text-align: center;
   color: #39414D;
+  margin-top: 40px;
 }
 
 .dynamic-content p {
@@ -2240,6 +2241,7 @@ body.modal_open {
 .section-buy__title {
   text-align: center;
   margin: 0 auto 60px;
+  text-transform: uppercase;
   color: #FFFFFF;
 }
 
@@ -2692,8 +2694,9 @@ body.modal_open {
     height: 16px;
   }
 
-  .section-specifics .section__title {
-    font-size: 34px;
+  .section__header {
+    max-width: 630px;
+    margin: 0 auto 40px;
   }
 
   .section-how-take .d-flex {
@@ -2750,6 +2753,10 @@ body.modal_open {
 
   .circumstances-footer .btns-wrap {
     flex-direction: row;
+  }
+
+  .section-buy {
+    background-size: 147px 50%;
   }
 }
 
@@ -2811,8 +2818,24 @@ body.modal_open {
     background-size: 158px 172px;
   }
 
+  .section-specifics .section__title {
+    font-size: 34px;
+  }
+
   .section-how-take__footer {
     padding: 20px;
+  }
+
+  .section-buy {
+    background-color: red;
+  }
+
+  .section-buy__title {
+    font-size: 34px;
+  }
+
+  .section-buy__title .title_lg {
+    font-size: 40px;
   }
 }
 
@@ -2864,6 +2887,10 @@ body.modal_open {
     width: 152px;
     padding-right: 0;
     margin-right: 20px;
+  }
+
+  .section-specifics .section__title {
+    margin-bottom: 20px;
   }
 
   .section-specifics .specifics__card {
