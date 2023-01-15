@@ -317,10 +317,10 @@
 }
 
 
-@media screen and (max-height: 768px) and (orientation: landscape) {
+@media screen and (max-height: 680px) and (orientation: landscape) {
   .section-banner{
     .banner-slider {
-      min-height: 630px;
+      min-height: 517px;
     }
   }
   .section-banner__part-right {
