@@ -36,7 +36,6 @@ $(document).ready(function () {
 //    YOUTUBE VIDEO
 
     $('#customPlaybtn').click(function (e) {
-        console.log(1111111)
         e.preventDefault();
         $(this).parents('.video__poster').fadeOut(700);
 

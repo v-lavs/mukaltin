@@ -316,6 +316,15 @@
   }
 }
 
+
+@media screen and (max-height: 768px) and (orientation: landscape) {
+  .section-banner{
+    .banner-slider {
+      min-height: 630px;
+    }
+  }
+}
+
 @media screen and (max-height: 768px) {
   .section-banner {
     .btn_main {

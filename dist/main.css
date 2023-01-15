@@ -857,50 +857,6 @@ body.modal_open {
   margin-right: 0;
 }
 
-.btn-buy {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 50%;
-  right: 34px;
-  width: 90px;
-  height: 130px;
-  z-index: 100;
-}
-
-.btn-buy__img {
-  width: 90px;
-  height: 93px;
-  display: block;
-  transition: opacity .5s;
-}
-
-.btn-buy__img_hover {
-  position: absolute;
-  display: block;
-  width: 99px;
-  height: 136px;
-  top: -7px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity .5s;
-}
-
-.btn-buy:hover .btn-buy__img,
-.btn-buy:focus .btn-buy__img {
-  opacity: 0;
-}
-
-.btn-buy:hover .btn-buy__img_hover,
-.btn-buy:focus .btn-buy__img_hover {
-  opacity: 1;
-}
-
-.btn-buy:active .press {
-  fill: #FF621C;
-}
-
 .literature-sources {
   font-family: "Exo 2", sans-serif;
   font-size: 20px;
@@ -3103,10 +3059,6 @@ body.modal_open {
     font: 400 16px/1.2 "Exo 2", sans-serif;
   }
 
-  .btn-buy {
-    right: 10px;
-  }
-
   .literature-sources {
     font-size: 16px;
     line-height: 19px;
@@ -3390,6 +3342,12 @@ body.modal_open {
 
   .section-banner .btns-wrap .btn {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-height: 768px) and (orientation: landscape) {
+  .section-banner .banner-slider {
+    min-height: 630px;
   }
 }
 
