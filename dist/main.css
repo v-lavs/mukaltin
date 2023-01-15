@@ -887,13 +887,13 @@ body.modal_open {
   transition: opacity .5s;
 }
 
-.btn-buy:hover .btn-pay__img,
-.btn-buy:focus .btn-pay__img {
+.btn-buy:hover > .btn-buy__img,
+.btn-buy:focus > .btn-buy__img {
   opacity: 0;
 }
 
-.btn-buy:hover .btn-pay__img_hover,
-.btn-buy:focus .btn-pay__img_hover {
+.btn-buy:hover .btn-buy__img_hover,
+.btn-buy:focus .btn-buy__img_hover {
   opacity: 1;
 }
 

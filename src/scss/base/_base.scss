@@ -86,11 +86,11 @@ body {
 
   &:hover,
   &:focus {
-    .btn-pay__img {
+   > .btn-buy__img {
       opacity: 0;
     }
 
-    .btn-pay__img_hover {
+    .btn-buy__img_hover {
       opacity: 1;
     }
   }
