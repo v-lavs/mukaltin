@@ -241,12 +241,8 @@
                                   </svg>
                             </span>Придбати
                         </a>
-                        <a href="#" class="btn btn_stroke">
-                             <span class="btn__icon">
-                                <svg width="24" height="25">
-                                      <use xlink:href="#information-circle"></use>
-                                  </svg>
-                            </span>Дізнатись більше
+                        <a href="#specifics" class="btn btn_stroke">
+                            Дізнатись більше
                         </a>
                     </div>
                 </div>
@@ -518,17 +514,12 @@
 
                             <div class="video__poster">
                                 <img src="assets/img/poster.jpg" alt="" class="video__media">
-                                <button id="customPlaybtn" data-iframe="https://www.youtube.com/embed/ymckfao9i9E?autoplay=1"
+                                <button id="customPlaybtn" data-iframe="https://www.youtube.com/embed/ymckfao9i9E?autoplay=1&mute=1"
                                         type="button"
                                         class="btn_play">
                                 </button>
                             </div>
-
-                            <iframe id="youtube-video" class="video__iframe" width="560" height="315"
-                                    src=""
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
+                            <div id="youtube-video" class="video__iframe"></div>
                         </div>
 
                     </div>

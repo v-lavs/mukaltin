@@ -2220,6 +2220,7 @@ body.modal_open {
   right: 0;
   bottom: 0;
   top: 0;
+  z-index: 2;
 }
 
 .section-advantages .video__media,
