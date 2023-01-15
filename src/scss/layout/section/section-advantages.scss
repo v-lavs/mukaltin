@@ -267,6 +267,11 @@
 
 @include respond-to($xs) {
   .section-advantages {
+    &:after {
+      -webkit-background-size: 140px;
+      background-size: 140px;
+    }
+
     .part_left:after {
       width: 39px;
       height: 246px;

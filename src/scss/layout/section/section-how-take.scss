@@ -177,18 +177,26 @@
 
 
 @include respond-to($xs) {
-
   .section-how-take__footer-title {
     font-size: 16px;
   }
+
   .section-how-take__footer {
     margin-top: 30px;
     padding: 10px;
     border-radius: 4px;
   }
+
   .card-take {
+    padding: 20px;
     margin-bottom: 20px;
   }
+
+  .card-take__icon {
+    width: 51px;
+    height: 53px;
+  }
+
   .section-how-take .btns-wrap {
     display: block;
     padding-top: 10px;

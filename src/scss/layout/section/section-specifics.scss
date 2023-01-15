@@ -153,6 +153,20 @@
       color: #3B88EF;
       font-size: 20px;
       line-height: 1.2;
+      cursor: pointer;
+      border-bottom: 1px solid currentColor;
+      -webkit-transition: .35s;
+      transition: .35s;
+
+      &:hover {
+        color: #FF7436;
+        border-color: currentColor;
+      }
+    }
+
+    .card__icon {
+      vertical-align: top;
+
     }
 
     .card__text {
@@ -194,6 +208,8 @@
       .card__title {
         font-size: 30px;
         margin-bottom: 10px;
+        border: none;
+        pointer-events: none;
       }
 
       .card__img {
@@ -202,6 +218,10 @@
 
       .card__text {
         display: block;
+      }
+
+      .card__icon {
+        display: none;
       }
     }
 
@@ -271,6 +291,12 @@
 }
 
 @include respond-to($md) {
+  .section-specifics {
+    overflow: hidden;
+    &:before {
+      margin-top: -40px;
+    }
+  }
   .section__header {
     max-width: 630px;
     margin: 0 auto 40px;
@@ -306,11 +332,13 @@
         font-size: 16px;
         line-height: 19px;
         margin-bottom: 0;
+        pointer-events: all;
 
-        svg {
+        .card__icon {
+          display: inline-block;
           width: 16px;
           height: 16px;
-          vertical-align: middle;
+          vertical-align: top;
         }
       }
 

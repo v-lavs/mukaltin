@@ -198,7 +198,7 @@
     position: absolute;
     bottom: 53px;
     display: flex;
-    right: 50%;
+    right: 54%;
     transform: translateX(50%);
     z-index: 1;
   }
@@ -211,6 +211,7 @@
     border: 2px solid #FFFFFF;
     border-radius: 50%;
     margin: 0 5px;
+    cursor: pointer;
     z-index: 1;
 
     &:before {
@@ -230,6 +231,7 @@
 
     &.disabled {
       opacity: .5;
+      cursor: not-allowed;
     }
   }
 
@@ -262,6 +264,10 @@
 @include respond-to($lg) {
   .banner-slider {
     min-height: 517px;
+
+    &__nav {
+      right: 60%;
+    }
 
     &__text {
       font-size: 20px;
@@ -342,7 +348,6 @@
       height: 145px;
     }
   }
-
 }
 
 @include respond-to($lg) {
@@ -370,6 +375,11 @@
 }
 
 @include respond-to($md) {
+  .section-banner {
+    background-position: center bottom;
+    -webkit-background-size: 140px;
+    background-size: 140px;
+  }
   .section-banner__part-left,
   .section-banner__part-right {
     width: 100%;
@@ -436,6 +446,7 @@
   }
   .banner-slider {
     &__nav {
+      right: 52%;
       bottom: 40px;
     }
 
@@ -450,13 +461,11 @@
       }
     }
   }
-
 }
 
 @include respond-to($sm) {
   .section-banner__part-right {
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding: 40px 20px 20px;
     max-width: 480px;
     width: 100%;
     margin: auto;
@@ -483,6 +492,20 @@
     &__slide:after {
       width: 110px;
       height: 105px;
+    }
+
+    &__nav {
+      left: 0;
+      right: auto;
+      transform: none;
+      width: 56%;
+      justify-content: center;
+      bottom: 30px;
+    }
+
+    .next-slide-btn,
+    .prev-slide-btn {
+      margin: 0 15px;
     }
   }
 
@@ -512,33 +535,51 @@
 }
 
 @include respond-to($xs) {
-  .banner-slider__number,
-  .banner-slider__text {
+  .section-banner {
+    .text_sm {
+      font-size: 16px;
+    }
+    .text_md {
+      font-size: 20px;
+    }
+    .btns-wrap .btn {
+      padding: 10px;
+    }
+    .wrap-img img {
+      top: 50px;
+    }
+  }
+
+  .section-banner__slogan {
     font-size: 16px;
   }
-  .banner-slider .part_2 {
-    padding-bottom: 20px;
-    padding-top: 85px;
-  }
+
   .banner-slider {
     min-height: 345px;
+    .part_2 {
+      padding-bottom: 20px;
+      padding-top: 85px;
+    }
 
     &__slide:after {
       width: 70px;
       height: 65px;
     }
   }
-  .section-banner .text_sm {
+
+  .banner-slider__number,
+  .banner-slider__text {
     font-size: 16px;
   }
-  .section-banner .text_md {
-    font-size: 20px;
-  }
+}
+
+@media screen and (max-width: 340px){
   .section-banner__slogan {
-    font-size: 16px;
+    margin-bottom: 60px;
   }
+
   .section-banner .btns-wrap .btn {
-    padding: 10px;
+    font-size: 14px;
   }
 }
 
