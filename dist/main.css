@@ -887,8 +887,8 @@ body.modal_open {
   transition: opacity .5s;
 }
 
-.btn-buy:hover > .btn-buy__img,
-.btn-buy:focus > .btn-buy__img {
+.btn-buy:hover .btn-buy__img,
+.btn-buy:focus .btn-buy__img {
   opacity: 0;
 }
 
