@@ -513,13 +513,22 @@
                         </article>
                     </div>
                     <div id="video" class="part_right">
-                        <div class="player-wrap">
-                            <iframe class="video" width="560" height="315"
-                                    src="https://www.youtube.com/embed/ymckfao9i9E"
+
+                        <div class="player-wrap video">
+
+                            <div class="video__poster">
+                                <img src="assets/img/poster.jpg" alt="" class="video__media">
+                                <button id="customPlaybtn" data-iframe="https://www.youtube.com/embed/ymckfao9i9E?autoplay=1"
+                                        type="button"
+                                        class="btn_play">
+                                </button>
+                            </div>
+
+                            <iframe id="youtube-video" class="video__iframe" width="560" height="315"
+                                    src=""
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowfullscreen></iframe>
-                            <button type="button" class="btn_play"></button>
                         </div>
 
                     </div>

@@ -14,7 +14,20 @@ function destroySwiper(sliderInstance) {
     }
 }
 
+//    YOUTUBE VIDEO
+function youtubeVideo() {
+    $('#customPlaybtn').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.video__poster').fadeOut(700);
+
+        $('#youtube-video').attr({src: $(this).data('iframe')})
+    })
+}
+
 $(document).ready(function () {
+
+    youtubeVideo();
+
     // MOBILE MENU
     const nav = $('.header__nav');
 
@@ -195,7 +208,9 @@ $(document).ready(function () {
         })
     }
 
-    handlePopover()
+    handlePopover();
+
+
 });
 
 

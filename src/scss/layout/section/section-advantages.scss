@@ -69,8 +69,16 @@
     overflow: hidden;
     z-index: 2;
   }
+  .video__poster{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
 
-  .video {
+  .video__media,
+  .video__iframe {
     position: absolute;
     left: 0;
     right: 0;
@@ -238,6 +246,7 @@
 
     .btns-wrap {
       width: 100%;
+
       .btn {
         padding: 20px;
         flex-grow: 1;
@@ -263,27 +272,34 @@
       height: 246px;
       background-size: contain;
     }
+
     .part_right {
       padding-top: 70px;
       margin-bottom: 30px;
     }
+
     .section-advantages__article {
       padding-bottom: 140px;
     }
+
     .section-advantages__article-title {
       margin-bottom: 20px;
-      strong{
+
+      strong {
         font-size: 16px;
       }
     }
+
     .section-advantages__footer-title {
       padding: 10px;
       border-radius: 4px;
     }
-    .btns-wrap{
+
+    .btns-wrap {
       display: block;
       width: 100%;
-      .btn{
+
+      .btn {
         margin-right: 0;
         margin-bottom: 10px;
         padding: 10px;

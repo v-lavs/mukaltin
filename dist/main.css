@@ -1479,7 +1479,7 @@ body.modal_open {
 
 .section-banner .btn:nth-child(n) {
   margin-right: 8px;
-  padding: 19px 20px;
+  padding: 19px 15px;
 }
 
 .banner-slider {
@@ -2199,7 +2199,16 @@ body.modal_open {
   z-index: 2;
 }
 
-.section-advantages .video {
+.section-advantages .video__poster {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.section-advantages .video__media,
+.section-advantages .video__iframe {
   position: absolute;
   left: 0;
   right: 0;
