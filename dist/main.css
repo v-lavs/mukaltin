@@ -3345,13 +3345,25 @@ body.modal_open {
   }
 }
 
-@media screen and (max-height: 680px) and (orientation: landscape) {
+@media screen and (max-height: 680px) and (width: 1280px) {
+  .section-banner__slogan {
+    margin-bottom: 43px;
+  }
+
   .section-banner .banner-slider {
-    min-height: 517px;
+    min-height: 630px;
+  }
+
+  .section-banner .banner-slider .part_1 img {
+    max-width: 90%;
   }
 
   .section-banner__part-right {
-    height: auto;
+    padding-top: 112px;
+  }
+
+  .section-banner .wrap-img {
+    max-width: 300px;
   }
 }
 
