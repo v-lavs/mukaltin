@@ -127,3 +127,10 @@
     height: 16px;
   }
 }
+
+@include respond-to($xs) {
+  .menu .menu__item {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

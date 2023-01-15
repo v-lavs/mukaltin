@@ -185,7 +185,7 @@ $(document).ready(function () {
             popoverText.html('');
             popoverTitle.html('');
             popover.removeClass('active');
-        }
+        };
 
         $('.popover-trigger').click(function (e) {
             e.preventDefault();
@@ -193,13 +193,28 @@ $(document).ready(function () {
 
             const topOffset = $(this).offset().top;
             const leftOffset = $(this).offset().left;
+            const bindingRect = $(this).get(0).getBoundingClientRect();
+            const popoverMaxWidth = 310;
+            const popoverPosition = {
+              top: topOffset,
+            };
+            if(bindingRect.left < 0){
+                popoverPosition.left = 10;
+                popoverPosition.right = 'auto';
+            } else if ((bindingRect.left + popoverMaxWidth) >= $(window).width()) {
+                popoverPosition.right = 20;
+                popoverPosition.left = 'auto';
+            } else {
+                popoverPosition.left = leftOffset;
+                popoverPosition.right = 'auto';
+            }
 
             // insert texts
             popoverTitle.html($(this).find('.card__title').text())
             popoverText.html($(this).siblings('.card__text').html())
 
             // set popover position
-            popover.css({top: topOffset, left: leftOffset});
+            popover.css(popoverPosition);
         });
 
         $('.custom-popover__close').click(function (e) {
