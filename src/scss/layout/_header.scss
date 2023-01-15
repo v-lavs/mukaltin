@@ -4,7 +4,6 @@
   right: 0;
   top: 20px;
   background-color: transparent;
-  padding: 0 40px;
   z-index: 900;
 
   &__inner {
@@ -117,18 +116,12 @@
       transform: translateY(0px);
     }
   }
-
   .btn-burger {
     display: block;
   }
 }
 
 @include respond-to($sm) {
-  .header {
-    .container {
-      padding: 0;
-    }
-  }
   .header__logo {
     max-width: 128px;
     height: 16px;

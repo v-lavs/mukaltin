@@ -1245,7 +1245,6 @@ body.modal_open {
   right: 0;
   top: 20px;
   background-color: transparent;
-  padding: 0 40px;
   z-index: 900;
 }
 
@@ -2924,10 +2923,6 @@ body.modal_open {
 }
 
 @media only screen and (max-width: 767px) {
-  .header .container {
-    padding: 0;
-  }
-
   .header__logo {
     max-width: 128px;
     height: 16px;
