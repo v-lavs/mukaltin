@@ -254,7 +254,6 @@ $(document).ready(function () {
 
     handlePopover();
 
-
 });
 
 

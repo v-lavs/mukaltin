@@ -40,6 +40,7 @@
 
     img {
       width: 100%;
+      display: block;
     }
   }
 
@@ -166,6 +167,10 @@
 @include respond-to($sm) {
   .section-how-take {
     padding-top: 80px;
+    .part_left{
+      justify-content: center;
+      margin-bottom: 50px;
+    }
   }
   .section-how-take__footer {
     padding: 20px;
