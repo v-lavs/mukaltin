@@ -589,6 +589,7 @@
     .part_2 {
       padding-bottom: 20px;
       padding-top: 85px;
+      justify-content: flex-end;
     }
 
     &__slide:after {
@@ -597,7 +598,9 @@
     }
   }
 
-  .banner-slider__number,
+  .banner-slider__number{
+    display: none;
+  }
   .banner-slider__text {
     font-size: 16px;
   }
@@ -608,8 +611,11 @@
     margin-bottom: 60px;
   }
 
-  .section-banner .btns-wrap .btn {
-    font-size: 14px;
+  .section-banner {
+
+    .btns-wrap .btn {
+      font-size: 14px;
+    }
   }
 }
 
