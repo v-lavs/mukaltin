@@ -598,11 +598,11 @@
     }
   }
 
-  .banner-slider__number{
+  .banner-slider__number {
     display: none;
   }
   .banner-slider__text {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -610,9 +610,10 @@
   .section-banner__slogan {
     margin-bottom: 60px;
   }
-
+  .banner-slider__text {
+    font-size: 16px;
+  }
   .section-banner {
-
     .btns-wrap .btn {
       font-size: 14px;
     }
