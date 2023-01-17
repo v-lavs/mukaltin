@@ -39,7 +39,7 @@
     padding-top: 30px;
 
     img {
-      width: 100%;
+      width: 85%;
       display: block;
     }
   }
@@ -56,7 +56,8 @@
       flex-grow: 1;
     }
   }
-  &__title{
+
+  &__title {
     display: none;
   }
 }
@@ -124,13 +125,19 @@
   }
 
 }
+
 @include respond-to($lg) {
   .section-how-take {
     &:before {
       display: none;
     }
+
+    .part_left img {
+      width: 90%;
+    }
   }
 }
+
 @include respond-to($md) {
   .section-how-take {
     .d-flex {
@@ -143,8 +150,10 @@
     }
 
     .part_left {
+      margin-bottom: 50px;
+
       img {
-        width: 90%;
+        width: 85%;
         margin: 0 auto;
       }
     }
@@ -167,9 +176,10 @@
 @include respond-to($sm) {
   .section-how-take {
     padding-top: 80px;
-    .part_left{
+
+    .part_left {
       justify-content: center;
-      margin-bottom: 50px;
+
     }
   }
   .section-how-take__footer {
@@ -191,7 +201,9 @@
     padding: 10px;
     border-radius: 4px;
   }
-
+  .section-how-take .part_left img {
+    width: 90%;
+  }
   .card-take {
     padding: 20px;
     margin-bottom: 20px;
@@ -210,18 +222,20 @@
       margin-right: 0;
       margin-bottom: 10px;
       padding: 10px;
-      &:last-child{
+
+      &:last-child {
         margin-bottom: 0;
       }
     }
   }
-  .section-how-take__title{
+  .section-how-take__title {
     display: block;
     text-transform: uppercase;
     text-align: center;
     font-size: 16px;
     margin: 0 auto 8px;
-    .title_lg{
+
+    .title_lg {
       font-size: 34px;
       color: #3B88EF;
     }
